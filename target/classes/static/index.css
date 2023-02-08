@@ -1,0 +1,168 @@
+
+
+body {
+    overflow-x: hidden;
+    font-family: Sans-Serif;
+    margin: 0;
+}
+  
+  .menu-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background: lightblue;
+    color: #cdcdcd;
+    height: 80px;
+    font-style: bold;
+    border-bottom: 1px solid #333333;
+  }
+
+  header ul li a:hover::before 
+  {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+  
+  
+  .menu-container a {
+    text-decoration: none;
+  }
+  header ul li a::before {
+   
+    background: #333;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+   
+}
+header ul {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+
+header ul li {
+  list-style: none;
+
+}
+
+header ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 0.80em;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+  
+  .menu-container a:hover {
+    color: white;
+  }
+  
+  
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  
+  @media only screen and (max-width: 767px) { 
+    .menu-container {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+
+  
+    .menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 300px;
+      right: -300px;
+      top: 0;
+      margin: -20px;
+      padding: 75px 50px 50px;
+      background: #df0606;
+    }
+  
+    .menu-container input:checked ~ .menu {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media only screen and (min-width: 768px) { 
+    .menu-container {
+      width: 100%;
+    }
+  
+    .menu-container a {
+      color: red;
+    }
+  
+    .menu-container input {
+      display: none;
+    }
+  
+
+    .menu-container span {
+      display: none;
+    }
+  
+    .menu {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .menu ul {
+      display: flex;
+      padding: 0;
+    }
+  
+    .menu li {
+      padding: 0 20px;
+    }
+  }
+  .hero{
+    height: 80vh;
+    width: 100%;
+    background-image: url("../Images/Aston\ campus.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left:65%;
+    transform: translateY(-50%);
+  }
+     
+  
+  h1{
+    color: white;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+  }
+  h3{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  h4{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
