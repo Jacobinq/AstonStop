@@ -9,7 +9,7 @@ public class HomeController {
 
     @GetMapping("/Index") 
     public String index(){
-        return "Index";
+        return "Index.html";
     }
 }
 
