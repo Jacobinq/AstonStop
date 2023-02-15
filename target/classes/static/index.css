@@ -10,11 +10,12 @@ body {
     position: absolute;
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     background: lightblue;
     color: #cdcdcd;
     height: 80px;
     font-style: bold;
+    padding-bottom: 5px;
     border-bottom: 1px solid #333333;
   }
 
@@ -110,7 +111,7 @@ header ul li a {
     .menu-container a {
       color: red;
     }
-  
+    aboutus
     .menu-container input {
       display: none;
     }
@@ -137,11 +138,21 @@ header ul li a {
     }
   }
   .hero{
-    height: 80vh;
+   position: relative;
+ 
+   width: 120%;
+   height: 60%;
+  }
+  .ImageTable{
+    padding-top: 4.5%;
+  }
+  /* .table{
+    padding-top: 10%;
+  } */
+  .hero img{
+    display: block;
     width: 100%;
-    background-image: url("../Images/Aston\ campus.jpeg");
-    background-size: cover;
-    background-position: center;
+    height: 100%;
   }
   .content{
     position: absolute;
@@ -149,17 +160,21 @@ header ul li a {
     left:65%;
     transform: translateY(-50%);
   }
+
      
   
   h1{
-    color: white;
+
     margin: 20px 0px 20px;
     font-size: 75px;
+    left:67%;
+    transform: translateY(-50%);
   }
   h3{
     color: white;
     font-size: 25px;
     margin-bottom: 50px;
+
   }
   h4{
     color: white;

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jacob Smith Productions</title>
+
+
+<link th:href="@{/login.css}" rel="stylesheet">
+<link th:href="@{/index.css}" rel="stylesheet">
+</head>
+<header>
+
+<nav class="menu-container"> 
+    <div class="menu">
+      <ul>
+        <li>
+          <a th:href="@{/}">
+            Home
+        </li>
+        <li>
+            <a th:href="@{/products}">
+            Products
+          </b>
+        </li>
+        <li>
+            <a th:href="@{/aboutus}">
+            About Us
+          </a>
+        </li>
+        <li>
+            <a th:href="@{/contact}">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <li>
+            <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+        </li>
+
+          </a>
+      </ul>
+    </div>
+  </nav>
+
+<body>
+
+
+</body>
+
+<div class = "Container"> 
+    <form action="login">
+        <br>
+        <br>
+        <h1 class="Login-Title">&#8595 Please Login Below! &#8595</h1>
+        <br> 
+        <label for="FirstName"><b>Email:</b></label> 
+        <br>
+        <input type="text" id="FName" name="fname" value=""minlength="8" required>
+        <br>
+        <br>
+        <label for="pass"><b>Password (8 characters minimum):</b></label>
+        <br>
+        <input type="password" id="pass" name="password"
+               minlength="8" required>
+        <br>
+        <input type="submit" value="Submit">
+      </form> 
+
+
+</div>
