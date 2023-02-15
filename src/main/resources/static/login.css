@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
-    background-color: red;
+    background-color: red; 
   }
 
 .Container {
@@ -15,13 +15,13 @@ body {
     margin-left: 30%;
     bottom: 10%;
   }
-  /* .login{
+  .login{
     padding-top: 100px;
   }
 
   .Submit{
     padding-top: 100px;
-  } */
+  }
   .header{
     
   }
@@ -45,4 +45,4 @@ body {
     position:absolute;
     width:10%;
 
-  }
+  } 
