@@ -1,4 +1,4 @@
-.header{
+/* .header{
   position: fixed;
   left: 0;
   top: 0;
@@ -7,10 +7,10 @@
   color: white;
   text-align: center;
   padding: 10px;
-}
+} */
 
 
-nav a{
+/* nav a{
   color: #fff;
   text-decoration: none;
   padding: 7px 25px;
@@ -20,9 +20,9 @@ nav a{
 h2 {
   margin-top: 100px;
   text-align: center;
-}
+} */
 
-.container {
+.Contact.container {
   width:50%;
   margin: auto;
   text-align: center;

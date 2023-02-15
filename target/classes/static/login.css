@@ -2,12 +2,12 @@ body {
     overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
-    background-color: red; 
+    background-color: lightblue; 
   }
 
 .Container {
-    border: 15px solid green;
-    background-color: green;
+    /* border: 15px solid green;
+    background-color: green; */
     text-align:center;
     height: 500px;
     width: 40%;
@@ -21,9 +21,6 @@ body {
 
   .Submit{
     padding-top: 100px;
-  }
-  .header{
-    
   }
   .Login-Title {
  
