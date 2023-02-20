@@ -22,7 +22,13 @@ public class User {
     @Column(nullable = false, length = 20)
     private String password;
 
-    public User(){}
+    public User(Long id, String email, String firstName, String lastName, String password){
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+
+    }
 
     public String getPassword() {
         return password;
@@ -55,3 +61,4 @@ public class User {
         this.lastName = lastName;
     }
 }
+
