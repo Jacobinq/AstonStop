@@ -1,7 +1,9 @@
-CREATE TABLE IF NOT EXISTS 'users'{
+CREATE TABLE 'user' (
+    'id' int(11),
+    'name' VARCHAR(255),
+    'email' VARCHAR(255),
+    'password' VARCHAR(255)
+)
 
-    'Id' int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    'name' VARCHAR(200),
-    'email' VARCHAR(200),
-    'password' VARCHAR(200),
-}
+
+
