@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration  scaan="true" scanPeriod="10 seconds">
+
+    <jmxConfigurator/>
+
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="UNKNOWN_APP"/>
+    <springProperty scope="context" name="FILE_PATH" source="log.path" defaultValue="logs/"/>
+    <springProperty scope="context" name="MAX_HISTORY" source="log.max_history_in_hours" defaultValue="144"/>
+
+    <property name="CONSOLE_LOG_PATTERN" value="%yellow(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight(${LOG_LEVEL_PATTERN:-%5p}) %magenta(${PID:- }) --- [%15.15t]  %cyan(%-40.40logger{39}) : %m%n}"/>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>info</level>
+        </filter>
+        <encoder>
+            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILE_PATH}/${APP_NAME:-.}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${FILE_PATH}/${APP_NAME:-.}-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>${MAX_HISTORY}</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
