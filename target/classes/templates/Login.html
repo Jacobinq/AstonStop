@@ -1,71 +1,81 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Login !</title>
+    <html lang="en">
+    <head>
+      <title>Login Form</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="login.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>                  
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="home">
+              <div class="homepage">
+                <h1>Aston Stop</h1>
+          </header>
+        
+          <div class="navigation">
+            <div class="banner">
+              <nav class="navbar">
+                <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="aboutus.html">About Us</a></li>
+                  <li><a href="products.html">Products </a></li>            
+                  <li><a href="contactus.html">Contact Us</a></li>    
+                  <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+              </nav>
+            </div>
 
-<link th:href="@{/login.css}" rel="stylesheet">
-<link th:href="@{/index.css}" rel="stylesheet">
-</head>
-<header>
+        <section class="container forms">
+            <div class="form login">
+                <div class="form-content">
+                    <h1>Login</h1>
+                    <p>Welcome back you've been missed!</p>
+                    <form action="#">
+                        <div class="field input-field">
+                            <input type="email" placeholder="Email" class="input">
+                        </div>
 
-<nav class="menu-container"> 
-    <div class="menu">
-      <ul>
-        <li>
-          <a th:href="@{/}">
-            Home
-        </li>
-        <li>
-            <a th:href="@{/products}">
-            Products
-          </b>
-        </li>
-        <li>
-            <a th:href="@{/aboutus}">
-            About
-          </a>
-        </li>
-        <li>
-            <a th:href="@{/contact}">
-            Contact
-          </a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <li>
-            <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
-        </li>
+                        <div class="field input-field">
+                            <input type="password" placeholder="Password" class="password">
+                            <i class='bx bx-hide eye-icon'></i>
+                        </div>
 
-          </a>
-      </ul>
-    </div>
-  </nav>
+                        <div class="form-link">
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
 
-<body>
+                        <div class="field button-field">
+                            <button>Login</button>
+                        </div>
+                    </form>
 
-  <h1 class="Login-Title">Please Login Below!</h1>
-</body>
+                    <div class="form-link">
+                        <span>Don't have an account? <a href="signup.html" class="link signup-link">Signup</a></span>
+                    </div>
+                </div>
 
-<div class = "Container"> 
-    <form action="login">
-        <br>
-        <br>
-        <br> 
-        <label for="FirstName"><b>Email:</b></label> 
-        <br>
-        <input type="text" id="FName" name="fname" value=""minlength="8" required>
-        <br>
-        <br>
-        <label for="pass"><b>Password (8 characters minimum):</b></label>
-        <br>
-        <input type="password" id="pass" name="password"
-               minlength="8" required>
-        <br>
-        <input type="submit" value="Submit">
-      </form> 
+                <div class="line"></div>
 
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
 
-</div>
+                <div class="media-options">
+                    <a href="#" class="field google">
+                      <i class='bx bxl-google google-icon'></i>
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </body>
+</html>
