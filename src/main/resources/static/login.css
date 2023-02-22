@@ -1,4 +1,4 @@
-/* body {
+.body {
     overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
@@ -6,41 +6,36 @@
   }
 
 .Container {
-    /* border: 15px solid green;
-    /* background-color: green; */
-    /* text-align:center; */
-    /* height: 500px;
+    background-color: lightblue;
+    text-align:center;
+    height: 500px;
     width: 40%;
 
     margin-left: 30%;
-    bottom: 10%;
+    margin-top: 10%;
   }
   .login{
     padding-top: 100px;
   }
 
   .Submit{
-    padding-top: 100px; */ 
-  /* }
+    padding-top: 100px; 
+  }
   .Login-Title {
  
     margin:100px 0;
     text-align:center;
     text-transform:capitalize;
     color:rgb(100, 100, 205);
-    position:relative; */
 
-  /* } */
+
+  }
  
-  /* .Login-Title::after {
+   .Login-Title::after {
    
-    height:6px;
-    left:55%;
-    transform:translateX(-55%);  
     background-image:linear-gradient(to left, transparent 5%, #625261);
-    bottom:-20px;
     position:absolute;
     width:10%;
 
-  }  */
+  }  
   
