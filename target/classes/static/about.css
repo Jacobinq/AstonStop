@@ -7,7 +7,6 @@
 }
 
 .story-box{
-
   position: relative;
   width: 100%;
   height: 100%;
@@ -25,7 +24,7 @@ justify-content: center;
 width: 1000px;
 height: 550px; 
 box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
-background-color: lightblue;
+background-color: rgb(74, 13, 244);
 }
 
 .aboutus{
