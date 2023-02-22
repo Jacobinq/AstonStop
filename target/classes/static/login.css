@@ -35,12 +35,6 @@
     opacity: 0;
     pointer-events: none;
 }
-/* header{
-    font-size: 28px;
-    font-weight: 600;
-    color: #232836;
-    text-align: center;
-} */
 
 form{
     margin-top: 0px;
@@ -143,21 +137,6 @@ a.facebook .facebook-icon{
     background-color: #fff;
 }
 
-/* a.google{
-    color: #fff;
-    background-color: #3dc81e;
-.facebook-icon,
-img.google-img{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-}
-img.google-img{
-    height: 35px;
-    width: 35px;
-    object-fit: cover;
-} */
 a.google{
     border: 1px solid #CACACA;
 }
