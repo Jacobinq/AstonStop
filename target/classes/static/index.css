@@ -8,7 +8,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     background: lightblue;
     color: #cdcdcd;
     height: 80px;
@@ -143,7 +143,7 @@ header ul li a {
    height: 60%;
   }
   /* .ImageTable{
-    padding-top: 4%;
+    padding-top: -4%
   } */
   .hero img{
     display: block;
@@ -185,14 +185,14 @@ header ul li a {
     color:rgb(100, 100, 205);
     position:relative;
     height:6px;
-    left:55%;
+    left: 01%;
   }
  
   .team-section-title::after {
    
     height:6px;
-    left:55%;
-    transform:translateX(-55%);  
+    left: 01%;
+    transform:translateX(01%);  
     background-image:linear-gradient(to left, transparent 5%, #625261);
     bottom:-20px;
     position:absolute;

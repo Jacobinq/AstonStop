@@ -1,4 +1,4 @@
-body {
+/* body {
     overflow-x: hidden;
     font-family: Sans-Serif;
     margin: 0;
@@ -7,9 +7,9 @@ body {
 
 .Container {
     /* border: 15px solid green;
-    background-color: green; */
-    text-align:center;
-    height: 500px;
+    /* background-color: green; */
+    /* text-align:center; */
+    /* height: 500px;
     width: 40%;
 
     margin-left: 30%;
@@ -20,19 +20,19 @@ body {
   }
 
   .Submit{
-    padding-top: 100px;
-  }
+    padding-top: 100px; */ 
+  /* }
   .Login-Title {
  
     margin:100px 0;
     text-align:center;
     text-transform:capitalize;
     color:rgb(100, 100, 205);
-    position:relative;
+    position:relative; */
 
-  }
+  /* } */
  
-  .Login-Title::after {
+  /* .Login-Title::after {
    
     height:6px;
     left:55%;
@@ -42,4 +42,5 @@ body {
     position:absolute;
     width:10%;
 
-  } 
+  }  */
+  
