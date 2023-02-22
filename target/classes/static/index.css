@@ -10,10 +10,10 @@ body {
     align-items: center;
     /* margin-bottom: 20px; */
     background: lightblue;
-    color: #cdcdcd;
-    height: 80px;
+    color: white;
+    height: 70px;
     font-style: bold;
-    padding-bottom: 5px;
+    padding-bottom: 1px;
     border-bottom: 1px solid #333333;
     top: 0%;
   }
@@ -64,7 +64,7 @@ header ul li a {
 
   
   .menu-container a:hover {
-    color: white;
+    color: red;
   }
   
   
@@ -93,7 +93,7 @@ header ul li a {
       right: -300px;
       top: 0;
       margin: -20px;
-      padding: 75px 50px 50px;
+      padding: 75px 50px 30px;
       background: #df0606;
     }
   
@@ -108,7 +108,7 @@ header ul li a {
     }
   
     .menu-container a {
-      color: red;
+      color: white;
     }
     aboutus
     .menu-container input {
