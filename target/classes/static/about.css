@@ -228,3 +228,13 @@ h1{
   position:relative;
 }
 
+.background {
+  background-image: url('aston.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 120vh;
+  padding-top: 60px;
+}
+
+
