@@ -5,7 +5,7 @@ blockquote {
   
   footer {
     height: 220px;
-    background-color: #2a2e3b;
+    background-color: #7a91df;
     color: #aab4d0;    
   }
   
@@ -33,17 +33,17 @@ blockquote {
   }
   
   .social {
-    color:  rgb(201, 156, 67);
+    color:  rgb(93, 16, 105);
     align-items: center;
   }
 
   .contact-me {
     padding-top: 20px;
-    color:  rgb(201, 156, 67);
+    color:   rgb(93, 16, 105);
   }
   
   #contact-me {
-    color:  rgb(201, 156, 67);
+    color:   rgb(93, 16, 105);
   }
   
   .seprator {
