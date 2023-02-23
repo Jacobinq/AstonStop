@@ -29,6 +29,7 @@ background-color: rgb(74, 13, 244);
 
 .aboutus{
 font-size: large;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 margin-top: 20px;
 color: white;
 text-align: center;
@@ -57,7 +58,6 @@ h1 {
   font-family: "Arial", sans-serif !important;
 }
 
-<<<<<<< HEAD
 
 
 /* RESPONISVENESS */
@@ -234,5 +234,3 @@ h1{
 }
 
 
-=======
->>>>>>> 6ad5459dd8865d637631abb748574a4edfa6f974
