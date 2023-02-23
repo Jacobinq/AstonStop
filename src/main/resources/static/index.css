@@ -8,7 +8,6 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    /* margin-bottom: 20px; */
     background: lightblue;
     color: white;
     height: 70px;
@@ -24,12 +23,11 @@ body {
       transform-origin: left;
   }
   
-  
   .menu-container a {
     text-decoration: none;
   }
-  header ul li a::before {
-   
+
+  header ul li a::before { 
     background: #333;
     transform: scaleX(0);
     transition: transform 0.5s ease-in-out;
@@ -50,7 +48,6 @@ header ul {
 
 header ul li {
   list-style: none;
-
 }
 
 header ul li a {
@@ -61,13 +58,10 @@ header ul li a {
   text-transform: uppercase;
   letter-spacing: 10px;
 }
-
   
   .menu-container a:hover {
     color: red;
   }
-  
-  
   
   .menu ul {
     list-style: none;
@@ -84,8 +78,6 @@ header ul li a {
       align-items: flex-end;
     }
     
-
-  
     .menu {
       position: absolute;
       box-sizing: border-box;
@@ -114,7 +106,6 @@ header ul li a {
     .menu-container input {
       display: none;
     }
-  
 
     .menu-container span {
       display: none;
@@ -136,49 +127,47 @@ header ul li a {
       padding: 0 20px;
     }
   }
+
   .hero{
    position: relative;
- 
    width: 120%;
    height: 60%;
   }
-  /* .ImageTable{
-    padding-top: -4%
-  } */
+
   .hero img{
     display: block;
     width: 100%;
     height: 100%;
   }
+
   .content{
     position: absolute;
     top: 50%;
     left:65%;
     transform: translateY(-50%);
   }
-
      
-  
   h1{
-
     margin: 20px 0px 20px;
     font-size: 75px;
     left:67%;
     transform: translateY(-50%);
   }
+
   h3{
     color: white;
     font-size: 25px;
     margin-bottom: 50px;
 
   }
+
   h4{
     color: white;
     letter-spacing: 2px;
     font-size: 20px;
   }
+
   .team-section-title {
- 
     margin:100px 0;
     text-align:center;
     text-transform:capitalize;
@@ -189,7 +178,6 @@ header ul li a {
   }
  
   .team-section-title::after {
-   
     height:6px;
     left: 01%;
     transform:translateX(01%);  
@@ -197,17 +185,15 @@ header ul li a {
     bottom:-20px;
     position:absolute;
     width:30%;
-
   }
+
   .team-row {
-   
     flex-wrap:wrap;
     padding:50px 0;
     display:flex;
     justify-content:center;
   }
   .ASproduct {
-   
     transition:all 0.6s;
     flex:1 1 250px;
     text-align:center;
@@ -218,7 +204,6 @@ header ul li a {
    
   }
   .ASproduct img {
-   
     width:165px;
     border-radius:50%;
     display:block;
@@ -226,24 +211,20 @@ header ul li a {
     height:165px;
     object-fit:cover;
     border:2px solid #000000;
-   
   }
-  .ASproduct:hover {
 
+  .ASproduct:hover {
     transform:translateY(-30px);
     box-shadow:0 15px 25px rgba(0,0,0,0.2);
- 
   }
+
   .ASproduct h2 {
-   
     color:#625261;
     margin:15px 0;
     text-transform:uppercase;
     font-size:24px;
-   
   }
   .ASproduct p {
-   
     line-height:1.5;
     font-size:16px;
     color:#838383;
@@ -256,6 +237,7 @@ header ul li a {
     line-height: 24px;
     margin-bottom: 22px;
   }
+
   .team-row .button{
     background-color:#2f00ff;
     color: white;
@@ -266,6 +248,7 @@ header ul li a {
     border-radius: 32px;
     transition: .6s;
   }
+
   .team-row .button:hover{
     background-color: transparent;
     border: 2px solid #001eff;

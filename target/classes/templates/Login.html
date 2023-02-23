@@ -1,63 +1,68 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <title>Login Form</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstonStop Login Page</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link th:href="@{/index.css}" rel="stylesheet">
-        <link th:href="@{/login.css}" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>                  
-    </head>
-    <body>
-        <header>
-        <nav class="menu-container"> 
-            <div class="menu">
-              <ul>
-                <li>
-                  <a th:href="@{/}">
-                    Home
-                </li>
-                <li>
-                    <a th:href="@{/products}">
-                    Products
-                  </b>
-                </li>
-                <li>
-                    <a th:href="@{/aboutus}">
-                    About
-                  </a>
-                </li>
-                <li>
-                    <a th:href="@{/contact}">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <li>
-                    <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
-                </li>
-        
-                  </a>
-              </ul>
-            </div>
-          </nav>
-        </header>
-      
+<link th:href="@{/login.css}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
 
-        <section class="container forms">
-          <div class="ImageTable"> 
-            <table cellpadding="0" cellspacing="0" boarder="0"> 
-                <tr> 
-                    <td>
-                        <div class="hero">
-                            <!-- <img src="../Images/Login.jpg"> -->
-            
-                    </td>
-            </div>
+<header>
+<nav class="menu-container"> 
+    <div class="menu">
+      <ul>
+        <li>
+          <a th:href="@{/}">
+            Home
+        </li>
+        <li>
+            <a th:href="@{/products}">
+            Products
+          </b>
+        </li>
+        <li>
+            <a th:href="@{/aboutus}">
+            About
+          </a>
+        </li>
+        <li>
+            <a th:href="@{/contact}">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <li>
+            <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+        </li>
+
+          </a>
+      </ul>
+    </div>
+  </nav>
+</header>  
+
+<body>
+<div class="ImageTable"> 
+<table cellpadding="0" cellspacing="0" boarder="0"> 
+    <tr> 
+        <td>
+            <div class="hero">
+                <img src="../Images/login.jpg">
+
+        </td>
+</div>
+</tr>
+</table> 
+</div>
+
             <div class="form login">
                 <div class="form-content">
                     <br>
@@ -83,12 +88,56 @@
                     </form>
 
                     <div class="form-link">
-                        <span>Don't have an account? <a th:href="@{/signup}">Register</a></span>
+                        <span>Don't have an account? <a th:href="@{/signup}">Register Here</a></span>
                     </div>
                 </div>
                 </div>
             </div>
             </div>
         </section>
-    </body>
+    
+    <footer >
+      <link th:href="@{/footer.css}" rel="stylesheet">
+      
+              <div class="inside-footer">  
+                  <div class="row">
+                  
+                          <div class="footer-link">
+                              <p id="contact-me">  Aston Stop</p> 
+                              <a href="contact" class="link login-link">Contact Us</a></span>
+                              <p id="contact-me" > 8 Coleshill St, Birmingham B4 7BX </p>
+                              <p id="contact-me"> <u> info@astonstop.com</u></p>
+                            </div>
+                 
+                      <div class="professional-links">
+                          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                          <div class="social-links">
+                              <a class="social" href="https://twitter.com/vscodetips" target="_blank">
+                                  <ion-icon name="logo-twitter"></ion-icon>
+                              </a>
+                          </div>
+                          <div class="social-links">
+                              <a class="social" href="https://github.com/jonasschmedtmann" target="_blank">
+                                  <ion-icon name="logo-github"></ion-icon>
+                              </a>
+                          </div>
+                          <div class="social-links">
+                              <a class="social" href="https://www.linkedin.com/in/random" target="_blank">
+                                  <ion-icon name="logo-linkedin"></ion-icon>
+                              </a>  
+                          </div>
+                          <div class="social-links">
+                              <a class="social" href="https://www.instagram.com/astonuniversity/" target="_blank">
+                                  <ion-icon name="logo-instagram"></ion-icon></a>
+                          </div>
+                      </div>  
+                      <div>
+                          <div class="text-center p-3 text-gold" > All Rights Reserved Aston-Stop & Aston University UK & US 2023 - © 2023 Copyright 
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>              
+          </footer>
 </html>

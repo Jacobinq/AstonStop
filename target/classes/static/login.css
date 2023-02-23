@@ -19,8 +19,8 @@
     position: absolute;
     max-width: 430px;
     width: 100%;
-    padding: 30px;
-    border-radius: 6px;
+    padding: 10px;
+    border-radius: 4px;
     background: lightblue;
 }
 .form.signup{
@@ -126,5 +126,4 @@ form{
     .form{
         padding: 20px 10px;
     }
-    
 }
