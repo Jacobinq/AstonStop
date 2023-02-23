@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link th:href="@{/index.css}" rel="stylesheet">
+  <link th:href="@{/signup.css}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>    
+
+</head>
+<body>
+  <header>
+    <nav class="menu-container"> 
+        <div class="menu">
+          <ul>
+            <li>
+              <a th:href="@{/}">
+                Home
+            </li>
+            <li>
+                <a th:href="@{/products}">
+                Products
+              </b>
+            </li>
+            <li>
+                <a th:href="@{/aboutus}">
+                About
+              </a>
+            </li>
+            <li>
+                <a th:href="@{/contact}">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <li>
+                <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+            </li>
+    
+              </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  <section>
+    <div class="container forms">
+      <div class="form signup">
+        <div class="ImageTable"> 
+            <table cellpadding="0" cellspacing="0" boarder="0"> 
+                <tr> 
+                    <td>
+                        <div class="hero">
+                            <img src="../Images/signup.png">
+            
+                    </td>
+            </div>
+      <h1>Sign Up</h1>
+      <p>Signup here, it's quick and easy!</p>
+      
+      <form action="#">
+        <div class="field input-field">
+          <input type="First Name" placeholder="First Name" class="input">
+        </div>
+        
+        <div class="field input-field">
+          <input type="Last Name" placeholder="Last Name" class="input">
+        </div>
+        
+        <div class="field input-field">
+          <input type="email" placeholder="Email" class="input">
+        </div>
+        
+        <div class="field input-field">
+          <input type="password" placeholder="Password" class="password">
+          <i class='bx bx-hide eye-icon'></i>
+        </div>
+      
+        <div class="field input-field">
+          <input type="confirm password" placeholder="Confirm Password" class="Confirm password">
+          <i class='bx bx-hide eye-icon'></i>
+        </div>
+        
+        <div class="field button-field">
+          <button>Login</button>
+        </div>
+        
+        <p>
+          By clicking the Sign Up button,you agree to our <br />
+          <a href="https://www.gov.uk/help/terms-conditions">Terms and Condition</a> and <a href="https://www.gov.uk/help/privacy-notice">Policy Privacy</a>
+        </p>
+        
+        <div class="form-link">
+          <span>Already have an account?<a th:href="@{/login}" >Login here</a></span>
+      </div>
+
+      </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

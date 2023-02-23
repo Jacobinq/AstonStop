@@ -1,0 +1,59 @@
+.main-header {
+  margin-top: 10px;
+  text-align: center;
+}
+.top {
+  display: flex;
+}
+
+.story-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+.story-card{
+margin-top: 150px;
+margin-bottom: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 1000px;
+height: 550px; 
+box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+background-color: rgb(74, 13, 244);
+}
+
+.aboutus{
+font-size: large;
+margin-top: 20px;
+color: white;
+text-align: center;
+padding: 20px 20px;
+}
+
+.text {
+  padding: 0 20px 20px;
+  color: white;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+h1 {
+  animation-duration: 2s;
+  animation-name: slidein;
+  font-family: "Arial", sans-serif !important;
+}
+

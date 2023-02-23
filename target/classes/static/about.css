@@ -6,10 +6,7 @@
   display: flex;
 }
 
- 
-/* About Us */
 .story-box{
-
   position: relative;
   width: 100%;
   height: 100%;
@@ -27,23 +24,21 @@ justify-content: center;
 width: 1000px;
 height: 550px; 
 box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
-background-color: lightblue;
+background-color: rgb(74, 13, 244);
 }
 
 .aboutus{
 font-size: large;
 margin-top: 20px;
-color: red;
+color: white;
 text-align: center;
 padding: 20px 20px;
-
 }
 
 .text {
   padding: 0 20px 20px;
   color: white;
 }
-
 
 @keyframes slidein {
   from {
@@ -62,6 +57,7 @@ h1 {
   font-family: "Arial", sans-serif !important;
 }
 
+<<<<<<< HEAD
 
 
 /* RESPONISVENESS */
@@ -238,3 +234,5 @@ h1{
 }
 
 
+=======
+>>>>>>> 6ad5459dd8865d637631abb748574a4edfa6f974
