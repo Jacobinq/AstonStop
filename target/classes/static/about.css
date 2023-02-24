@@ -1,4 +1,4 @@
-@media (min-width: 300px) {
+/* @media (min-width: 300px) {
   .about {
     display: flex;
     flex-wrap: wrap;
@@ -133,7 +133,7 @@ header ul li a {
     .menu li {
       padding: 0 20px;
     }
-  }
+  } 
 
   h1{
     color: black;
@@ -157,4 +157,4 @@ header ul li a {
   height: 120vh;
   padding-top: 60px;
 }
-}
+} */
