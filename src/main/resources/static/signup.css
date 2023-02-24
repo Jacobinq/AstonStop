@@ -6,33 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-/* .navigation{
-        list-style-type: none;
-        margin: 0;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-      }
-      
-      li {
-        float: left;
-      }
-      
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      
-      li a:hover {
-        background-color: #111;
-      } */
-      
+ 
 .signup-container{
     height: 100vh;
     width: 100%;
@@ -151,45 +125,6 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* a.facebook{
-    color: #fff;
-    background-color: #4267b2;
-}
-a.facebook .facebook-icon{
-    height: 28px;
-    width: 28px;
-    color: #0171d3;
-    font-size: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-a.google {
-    color: #fff;
-    background-color: #3dc81e;
-}
-.facebook-icon, img.google-img{
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-} */
-img.google-img{
-    height: 35px;
-    width: 35px;
-    object-fit: cover;
-}
-a.google{
-    border: 1px solid #CACACA;
-}
-a.google span{
-    font-weight: 500;
-    opacity: 0.6;
-    color: #232836;
 }
 
 @media screen and (max-width: 400px) {

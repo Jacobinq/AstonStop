@@ -55,9 +55,10 @@
   <section>
     <div class="signup-container">
       <div class="form signup">
-    
-      
+        <h1>Signup</h1>
+
       <form action="#">
+        
         <div class="field input-field">
           <input type="First Name" placeholder="First Name" class="input">
         </div>
@@ -81,16 +82,10 @@
         </div>
         
         <div class="field button-field">
-          <button>Login</button>
+          <button>Signup</button>
         </div>
-        
-        <p>
-          By clicking the Sign Up button,you agree to our <br />
-          <a href="https://www.gov.uk/help/terms-conditions">Terms and Condition</a> and <a href="https://www.gov.uk/help/privacy-notice">Policy Privacy</a>
-        </p>
-        
-        <div class="form-link">
-          <span>Don't have an account? <a href="login.html" class="link login-link">Login here</a></span>
+          <span>Already have an account? <a th:href="@{/login}">Login Here</a></span>
+          
       </div>
 
       </form>
