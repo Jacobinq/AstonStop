@@ -1,27 +1,10 @@
-<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Cookie&family=Ruda:wght@500&display=swap");
+
 .Contact.container {
   width:50%;
   margin: auto;
   text-align: center;
-}
-=======
-/* .header{
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-color: rgb(32, 32, 32);
-  color: white;
-  text-align: center;
-  padding: 10px;
-} */
-
-
-/* nav a{
-  color: #fff;
-  text-decoration: none;
-  padding: 7px 25px;
-  display: inline-block;
 }
 
 h2 {
@@ -29,7 +12,7 @@ h2 {
   text-align: center;
 } */
 
-/* .Contact.container {
+.Contact.container {
     width:50%;
     margin: auto;
     text-align: center;
@@ -63,36 +46,16 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(32, 32, 32);
-    color: white;
-    text-align: center;
-  }
-   */
->>>>>>> 6745d267824c986f71fc6fd785028a3b2a3033dc
 
-   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-
-   @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Cookie&family=Ruda:wght@500&display=swap");
-   
-   /*main styles ------------------------------------------------------------ */
    * {
      font-family: "Ruda", sans-serif;
      margin: 0;
      padding: 0;
    }
    body {
-     background: linear-gradient(
-       180deg,
-       #3b6b81,
-       #55b19d,
-       #bed380,
-       #e8ebf4
+     background: (
+      color:rgb(0)
+       
      );
      margin: 0px auto;
      font-size: 15px;
@@ -119,21 +82,14 @@ h2 {
    em {
      font-weight: bold;
    }
-   
-   
-     /* CONTACT ME ------------------------------------------------------------ */ 
-   
-   
+  
    .contact-card{
        margin-top: 20px;
        margin-bottom: 50px;
-       /* width: 100%;
-       height: 100vh; */
        border-radius: 5px;
        display: flex;
        align-items: center;
        justify-content: center;
-     
      }
      
      .inner-card {
@@ -143,13 +99,11 @@ h2 {
        box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
        background-color: #407334;
        perspective: 1000px;
-     
-     
      }
      
      .main-box{
-      /* margin: 20px; */
-      /* transform: rotateY(-180deg); */
+      margin: 20px;
+      transform: rotateY(-180deg);
       transform-style: preserve-3d;
       transition: transform 1s;
       border-radius: 5px;
@@ -172,9 +126,7 @@ h2 {
      
      .back-card{
        transform: rotateY('angle')
-     }
-     
-     
+     }  
      
      .input-name, .input-name1{
        color: #c99c43;
@@ -215,8 +167,6 @@ h2 {
        text-align: center;
      }
      
-     
-     
      ::placeholder{
        font-size: 12px;
      }
@@ -225,8 +175,6 @@ h2 {
        font-size: 18px;
      }
      
-     
-     /* SUBMIT BUTTON */
      button{
        position: relative;
        display: flex;
@@ -241,14 +189,13 @@ h2 {
        margin: 30px 0px 30px 250px;
        width: 60%;
        cursor: pointer;
-       /* margin-left: 30 0px; */
+       margin-left: 30 0px;
      }
      
      .submit-button:hover{
        background-color: #c99c43;
        color: #181b23;
      }
-     
      
      span{
        font-size: 12px;
@@ -275,15 +222,12 @@ h2 {
        font-size: 10px;
      }
      
-     
      #contact-method{
        display: inline-block;
        width:50px;
        text-align: right;
        margin-right: 5px;
      } 
-     
-     
      
      .tc{
        text-align: center;
@@ -292,3 +236,13 @@ h2 {
      form a{
        color: #2a2e3b;
      }
+   
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    text-align: center;
+  }
