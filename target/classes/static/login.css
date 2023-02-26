@@ -149,9 +149,14 @@ a.google span{
     color: #232836;
 }
 
+h1 {
+    text-align: center;
+  }
+
 @media screen and (max-width: 400px) {
     .form{
         padding: 20px 10px;
     }
     
 }
+
