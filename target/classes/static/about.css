@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #f2f2f2;
+  background: url('Aston.jpeg');
+  background-size: cover;
   color: #444;
   margin: 0;
   padding: 0;
