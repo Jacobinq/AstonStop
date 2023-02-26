@@ -1,11 +1,12 @@
-/* @media (min-width: 300px) {
+@@ -0,0 +1,168 @@
+@media (min-width: 300px) {
   .about {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: rgb(0, 0, 0);
   }
-
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -19,11 +20,10 @@
     margin-bottom: 40px;
     background: lightblue;
     color: red;
-    height: 80px;
+    height: 8%;
     font-style: bold;
     border-bottom: 1px solid #333333;
   }
-
   header ul li a:hover
   {
       transform: scaleX(1);
@@ -46,16 +46,15 @@
     height: 2px;
    
 }
+
 header ul {
   position: relative;
   display: flex;
   gap: 15px;
 }
-
 header ul li {
   list-style: none;
 }
-
 header ul li a {
   position: relative;
   text-decoration: none;
@@ -64,7 +63,6 @@ header ul li a {
   text-transform: uppercase;
   letter-spacing: 10px;
 }
-
   .menu-container a:hover {
     color: white;
   }
@@ -99,7 +97,7 @@ header ul li a {
       transform: translateX(-100%);
     }
   }
-
+  
   @media only screen and (min-width: 768px) { 
     .menu-container {
       width: 100%;
@@ -113,7 +111,6 @@ header ul li a {
       display: none;
     }
   
-
     .menu-container span {
       display: none;
     }
@@ -135,21 +132,23 @@ header ul li a {
     }
   } 
 
-  h1{
+
+h1{
     color: black;
-    margin: 20px 0px 20px;
+    margin: 5% 0px 0px;
     font-size: 75px;
-  }
+    font-weight: 600;
+}
   
-  .team-section-title {
+.team-section-title {
     margin:100px 0;
     text-align:center;
     text-transform:capitalize;
     color:rgb(100, 100, 205);
     position:relative;
-  }
+}
   
-  .background {
+.background {
   background-image: url('aston.jpeg');
   background-position: center;
   background-repeat: no-repeat;
@@ -157,4 +156,14 @@ header ul li a {
   height: 120vh;
   padding-top: 60px;
 }
-} */
+}
+
+.location{
+  width: 80%;
+  margin: auto;
+  padding-top: 20px 0;
+  }
+      
+.location iframe{   
+  width: 80%;
+}
