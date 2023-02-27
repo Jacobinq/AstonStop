@@ -160,7 +160,7 @@ h1 {
     
 }
 
-#image1 {
+#image2 {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('login.jpeg');
     height: 700px;
     background-size: cover;
@@ -170,49 +170,49 @@ h1 {
 }
 
 /* Container holding the image and the text */
-    #image1 .textonhomepage {
+    #image2 .textonhomepage {
         position: relative;
         text-align: center;
         color: white;
     }
 
 /* Bottom left text */
-    #image1 .bottom-left {
+    #image2 .bottom-left {
         position: absolute;
         bottom: 7%;
         left: 35px;
     }
 
 /* Bottom left button */
-    #image1 .bottom-left-two {
+    #image2 .bottom-left-two {
         position: absolute;
         bottom: 1%;
         left: 35px;
     }
 
 /* Top left text */
-    #image1 .top-left {
+    #image2 .top-left {
         position: absolute;
         top: 8px;
         left: 16px;
     }
 
 /* Top right text */
-    #image1 .top-right {
+    #image2 .top-right {
         position: absolute;
         top: 8px;
         right: 16px;
     }
 
 /* Bottom right text */
-    #image1 .bottom-right {
+    #image2 .bottom-right {
         position: absolute;
         bottom: 8px;
         right: 16px;
     }
 
 /* Centered text */
-    #image1 .centered {
+    #image2 .centered {
         position: absolute;
         top: 80%;
         left: 50%;
