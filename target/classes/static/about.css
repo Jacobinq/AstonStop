@@ -133,7 +133,14 @@ footer a:hover {
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/about.png');
     height: 700px;
     background-size: cover;
+<<<<<<< HEAD
     /* color: white; */
+=======
+    background-repeat: no-repeat;
+    overflow:visible;
+    background-size:contain;
+    color: white;
+>>>>>>> 95a374846d4ecc1460a0ba835689e153bbe6dbb1
     text-align:left;
     font-size: 16px;
 }
