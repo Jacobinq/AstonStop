@@ -130,7 +130,7 @@ footer a:hover {
 }
   
 #image1 {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/about.png');
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/about.png') no-repeat center center;
     height: 700px;
     background-size: cover;
     color: white;
