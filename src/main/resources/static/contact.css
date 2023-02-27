@@ -8,11 +8,13 @@ body {
 
 h1 {
   text-align: center;
-  font-weight: 300;
-  margin-top: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
 }
 h2{
   text-align: center;
+  font-weight: bold;
 }
 
 form {
@@ -128,3 +130,65 @@ footer a:hover {
       padding: 10px;
   }
 }
+
+
+
+#image1 {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/contactus.jpeg');
+  height: 1400px;
+  background-size: cover;
+  color: black;
+  text-align:left;
+  font-size: 16px;
+}
+
+/* Container holding the image and the text */
+  #image1 .textonhomepage {
+      position: relative;
+      text-align: center;
+      color: white;
+  }
+
+/* Bottom left text */
+  #image1 .bottom-left {
+      position: absolute;
+      bottom: 7%;
+      left: 35px;
+  }
+
+/* Bottom left button */
+  #image1 .bottom-left-two {
+      position: absolute;
+      bottom: 1%;
+      left: 35px;
+  }
+
+/* Top left text */
+  #image1 .top-left {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+  }
+
+/* Top right text */
+  #image1 .top-right {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+  }
+
+/* Bottom right text */
+  #image1 .bottom-right {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+  }
+
+/* Centered text */
+  #image1 .centered {
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+  }
