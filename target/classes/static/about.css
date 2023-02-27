@@ -1,192 +1,81 @@
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #444;
-    margin: 0;
-    padding: 0;
+.main-header {
+  margin-top: 10px;
+  text-align: center;
 }
-  
-div.img {
-    position: absolute;
-    top: 50px;
-    left: 40px;
+.top {
+  display: flex;
 }
 
-h1 {
-    text-align: center;
-    font-weight: 300;
-    margin-top: 50px;
-}
-  
-h2 {
-    text-align: center;
-    color: black;
+/* About Us */
+.story-box{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+.story-card{
+margin-top: 100px;
+margin-bottom: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 1000px;
+height: 550px; 
+box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+background-color: lightblue;
 }
 
-p {
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
+.aboutus{
+font-size: large;
+margin-top: 20px;
+color: red;
+text-align: center;
+padding: 20px 20px;
 }
-  
-form {
-    max-width: 600px;
-    margin: 50px auto; 
-    padding: 30px;
-    background-color: #d0aa39;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+
+.text {
+  padding: 0 20px 20px;
+  color: white;
 }
-  
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-  
-input,
-textarea {
-    display: block;
+
+
+ @keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
     width: 100%;
-    /* height: 300px; */
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    background-color: #f2f2f2;
-    border-radius: 3px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #444;
-    transition: border-color 0.3s ease-in-out;
+  }
 }
-  
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #00A0CC;
-}
-textarea{
-    height: 250px;
-}
-  
-input[type="submit"] {
-    background-color: #0e8b8f;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-  
-input[type="submit"]:hover {
-    background-color: #006b6e;
-}
-  
-.tc{
-    text-align: center;
-}
-  
-.error {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-@media (max-width: 767px) {
-    form {
-        padding: 20px;
-    }
-}
-  
-footer {
-    background-color: #1b1d2f;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: auto;
-    height: max-content;
-}
-  
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-  
-footer a:hover {
-    color: #9599bd;
-    text-decoration: underline;
-}
-  
-@media screen and (max-width: 500px) {
-    form {
-        padding: 10px;
-    }
-}
-  
-#image1 {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../Images/about.png');
-    height: 700px;
-    overflow: visible;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* color: white; */
-    text-align:left;
-    font-size: 12px;
+h1 {
+  font-family: Arial;
+  font-weight: bold;
+  animation-duration: 2s;
+  animation-name: slidein;
+  font-family: "Arial", sans-serif !important;
 }
 
-/* Container holding the image and the text */
-    #image1 .textonhomepage {
-        position: relative;
-        text-align: center;
-        color: white;
-    }
 
-/* Bottom left text */
-    #image1 .bottom-left {
-        position: absolute;
-        bottom: 7%;
-        left: 35px;
-    }
 
-/* Bottom left button */
-    #image1 .bottom-left-two {
-        position: absolute;
-        bottom: 1%;
-        left: 35px;
-    }
+h1{
+  color: black;
+  margin: 20px 0px 20px;
+  font-size: 75px;
+  font-family: verdana;
+}
 
-/* Top left text */
-    #image1 .top-left {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-    }
 
-/* Top right text */
-    #image1 .top-right {
-        position: absolute;
-        top: 8px;
-        right: 16px;
-    }
-
-/* Bottom right text */
-    #image1 .bottom-right {
-        position: absolute;
-        bottom: 8px;
-        right: 16px;
-    }
-
-/* Centered text */
-    #image1 .centered {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 12px;
-    }
+.background {
+background-image: url('aston.jpeg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 120vh;
+padding-top: 60px;
+}
