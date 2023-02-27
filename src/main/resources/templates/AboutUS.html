@@ -16,7 +16,6 @@
 
     <script src="https://kit.fontawesome.com/effeb5c9fd.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/effeb5c9fd.js" crossorigin="anonymous"></script>
-
     <header>
         <nav class="menu-container"> 
             <div class="menu">
@@ -24,6 +23,7 @@
                 <li>
                   <a th:href="@{/}">
                     Home
+                </li>
                 <li>
                     <a th:href="@{/products}">
                     Products
@@ -31,26 +31,28 @@
                 </li>
                 <li>
                     <a th:href="@{/aboutus}">
-                    About Us
+                    About
                   </a>
                 </li>
                 <li>
                     <a th:href="@{/contact}">
-                    Contact Us
+                    Contact
                   </a>
                 </li>
               </ul>
               <ul>
-                <li>
-                  <li>
+                    <li>
                     <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
                 </li>
         
                   </a>
+                  <li>
+                    <a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></i>
+                  </li>
               </ul>
             </div>
           </nav>
-    </header>
+        </header>
 </head>
 
 <body>
