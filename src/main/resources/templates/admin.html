@@ -9,12 +9,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
     rel="stylesheet">
-    <style>
-      *{
-        font-family: 'Source Sans Pro', sans-serif;
-        margin: 0;
-      }
-    </style>
+    <header>
+      <nav class="menu-container"> 
+          <div class="menu">
+            <ul>
+              <li>
+                <a th:href="@{/}">
+                  Home
+              </li>
+              <li>
+                  <a th:href="@{/products}">
+                  Products
+                </b>
+              </li>
+              <li>
+                  <a th:href="@{/aboutus}">
+                  About
+                </a>
+              </li>
+              <li>
+                  <a th:href="@{/contact}">
+                  Contact
+                </a>
+              </li>
+            </ul>
+            <ul>
+                  <li>
+                  <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+              </li>
+      
+                </a>
+                <li>
+                  <a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></i>
+                </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+</head>
   <title>React Admin App</title>
 </head>
 
