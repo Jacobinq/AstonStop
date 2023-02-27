@@ -161,7 +161,7 @@ h1 {
 }
 
 #image1 {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('login.jpeg');
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('about.webp');
     height: 700px;
     background-size: cover;
     color: white;

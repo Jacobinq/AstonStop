@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'open sans', sans-serif;
+    }
+    
+    .container {
+      height: 100vh;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .productPage {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #e2e2e2;
+      box-shadow: 1px 1px .5em #d8d8d8;
+    }
+    
+    .productPage img {
+      display: block;
+      overflow: hidden;
+      margin: 0;
+    }
+    .productPage .content {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      padding: .8em;
+    }
+    
+    .product img:hover {
+      opacity: 0.9;
+    }
+    
+    .content h3 {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .content span {
+      font-size: 1.15rem;
+    }
+    
+    h3 + span {
+      margin-top: .5em;
+    }
+    
+    .content a {
+      color: rgb(69, 67, 67);
+      text-decoration: none;
+    }
+    
+    .link {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(59, 57, 57);
+    }
+    
+    .link a {
+      transition: background .2s step-start;
+      width:100%;
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+    }
+   
+  .link a:hover {
+    background-color: rgb(0,0,0);
+  }
+  
+  .content a:hover{
+    color: rgb(0,0,0);
+  }
+  
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  
+  
+  .card {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+  }
+  
+  .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  .card:hover:before, .card:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+  
+  
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #c0c5d3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  /* a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  } */
