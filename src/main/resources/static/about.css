@@ -130,14 +130,14 @@ footer a:hover {
 }
   
 #image1 {
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/about.png');
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../Images/about.png');
     height: 700px;
     overflow: visible;
     background-repeat: no-repeat;
     background-size: cover;
     /* color: white; */
     text-align:left;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 /* Container holding the image and the text */
@@ -185,8 +185,8 @@ footer a:hover {
 /* Centered text */
     #image1 .centered {
         position: absolute;
-        top: 80%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 16px;
+        font-size: 12px;
     }
