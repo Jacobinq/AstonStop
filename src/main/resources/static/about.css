@@ -29,11 +29,13 @@ background-color: lightblue;
 }
 
 .aboutus{
-font-size: large;
+
 margin-top: 20px;
-color: red;
+color: rgb(75, 4, 113);
 text-align: center;
 padding: 20px 20px;
+font: bold;
+font:x-large
 }
 
 .text {
