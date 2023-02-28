@@ -1,6 +1,7 @@
 package com.example.demo.Controllers;
 // import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.stereotype.Controller;
 
 import ch.qos.logback.core.model.Model;
@@ -11,3 +12,5 @@ public class CheckOutController {
         return "checkout";
     }
 }
+
+// @PostMapping

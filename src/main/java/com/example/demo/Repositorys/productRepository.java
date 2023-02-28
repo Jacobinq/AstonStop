@@ -1,3 +1,4 @@
+package com.example.demo.Repositorys;
 // package com.example.demo.Product;
 
 // import org.springframework.data.jpa.repository.JpaRepository;
