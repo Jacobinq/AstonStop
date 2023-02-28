@@ -1,14 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   body {
       font-family: 'open sans', sans-serif;
     }
     
-    .container {
+    .Pcontainer {
       height: 100vh;
       display:flex;
       justify-content: center;
