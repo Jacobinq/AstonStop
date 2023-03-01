@@ -24,6 +24,7 @@ form {
   background-color: lightblue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  color: white;
 }
 
 label {
@@ -44,7 +45,7 @@ textarea {
   border-radius: 3px;
   box-sizing: border-box;
   font-size: 16px;
-  color: #444;
+  color: white;
   transition: border-color 0.3s ease-in-out;
 }
 
