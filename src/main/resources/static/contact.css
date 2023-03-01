@@ -21,7 +21,7 @@ form {
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #d0aa39;
+  background-color: lightblue;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -79,65 +79,13 @@ input[type="submit"]:hover {
 }
 
 
-/* .social-links {
-  display: flex ;
-  align-items: center;
-justify-content: center;
-padding-right: 20px;
-padding-top: 10px;
-transform: scale(1.5);
-}
-
-.social {
-color:  rgb(201, 156, 67);
-align-items: center;
-} */
-
-.error {
-  color: red;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 767px) {
-  form {
-      padding: 20px;
-  }
-}
-
-footer {
-  background-color: #1b1d2f;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-  margin-top: auto;
-  height: max-content;
-}
-
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #9599bd;
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 500px) {
-  form {
-      padding: 10px;
-  }
-}
-
 
 
 #image1 {
   background-image: linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../Images/contactus.jpeg');
   height: 1400px;
   background-size: cover;
-  color: black;
+  color: lightblue;
   text-align:left;
   font-size: 16px;
 }
