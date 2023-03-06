@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstonStop Landing Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link th:href="@{/index.css}" rel="stylesheet">
+<link th:href="@{/products.css}" rel="stylesheet">
+<!-- <link th:href="@{/footer.css}" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<header>
+  <nav class="menu-container"> 
+      <div class="menu">
+        <ul>
+          <li>
+            <a th:href="@{/}">
+              Home
+          </li>
+          <li>
+              <a th:href="@{/products}">
+              Products
+            </b>
+          </li>
+          <li>
+              <a th:href="@{/aboutus}">
+              About
+            </a>
+          </li>
+          <li>
+              <a th:href="@{/contact}">
+              Contact
+            </a>
+          </li>
+        </ul>
+        <ul>
+            <li>
+              <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
+          </li>
+            </a>
+            <li>
+              <a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></a></i>
+            </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+<body>
+ 
+    <div class="Product1">
+    <div th:each="product:${product}">
+        <div class="Pcontainer"> 
+            <div class="products">
+              <div class="productPage">
+                <div style="display: inline-block;">
+                <!-- <img src="..." th:src="${product.image}" width="250px" height="250px" alt=""> -->
+                <div class="content">
+                  <h3 th:text="${product.product}"> </h3>
+                    <h3 th:text="'£' + ${product.unit_price"> </h3>
+                    <h3 th:text="${product.stock"> </h3>
+
+                </div>
+                <div class="link">
+                  <a href="@{/checkout}">Buy Now</a>
+                  <a href="@{/checkout}">Add to      Cart</a>
+                </div>
+                </div>
+            </div>
+          </div>
+          <ul>
+
+
+
+
+
+
+    </div>
+    </div>

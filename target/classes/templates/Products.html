@@ -3,14 +3,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <html xmlns:th="http://www.thymeleaf.org">
+  <!-- <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"> -->
 <title>AstonStop Landing Page</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link th:href="@{/index.css}" rel="stylesheet">
 <link th:href="@{/products.css}" rel="stylesheet">
+<!-- <link th:href="@{/products.css}" rel="stylesheet"> -->
 <!-- <link th:href="@{/footer.css}" rel="stylesheet"> -->
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <header>
@@ -49,242 +49,60 @@
       </div>
     </nav>
   </header>
-<body>
-  <!-- <div class="card">
-    ASTON STOP
-   </div> --> 
-<!-- 
-    <h1>Products</h1>
-  
-    </nav> -->
-  
+  </div>
+  <div class="Products"> 
+    <div class="row">
+      <div th:each="product:${products}">
+      <div class="col-md-3 col-sm-6">
+        <div class="product-grid">
+                    <div class="product-image">
+                      <a href="#" class="image">
+                        <img class="pic-1" th:src="@{Images/}+${product.image}">
+                      </a>
+                      <ul class="product-links">
 
-  <main>
-    <section>
-      <h1 class="team-section-title">&#8595 Browse Our Products Below &#8595</h1>
-            <table>
-        <tr>
-
-      <div class="Pcontainer"> 
-        <div class="products">
-          <div class="productPage">
-            <div style="display: inline-block;">
-            <img src="../Images/Apron.jpeg" width="250px" height="250px" alt="">
-            <div class="content">
-              <h3><a href="#">Aston Stop Apron</a></h3>
-              <span><a href="#">£10.99</a></span>
-            </div>
-            <div class="link">
-              <a href="@{/checkout}">Buy Now</a>
-              <a href="@{/checkout}">Add to      Cart</a>
-            </div>
-            </div>
-        </div>
-      </div>
-      <ul>
-
-        <div class="Pcontainer"> 
-            <div class="products">
-              <div class="productPage">
-                <div style="display: inline-block;">
-                <img src="../Images/Coaster.jpg" width="250px" height="250px" alt="">
-                <div class="content">
-                  <h3><a href="#">Aston Stop</a></h3>
-                  <span><a href="#">£4.99</a></span>
-                </div>
-                <div class="link">
-                  <a href="@{/checkout}">Buy Now</a>
-                  <a href="@{/checkout}">Add to      Cart</a>
-                </div>
-                </div>
-            </div>
-          </div>
-      
-          <ul>
-            <div class="Pcontainer"> 
-                <div class="products">
-                  <div class="productPage">
-                    <div style="display: inline-block;">
-                    <img src="../Images/bag.jpeg" width="250px" height="250px" alt="">
-                    <div class="content">
-                      <h3><a href="#">Aston Stop Bag</a></h3>
-                      <span><a href="#">15.99</a></span>
-                    </div>
-                    <div class="link">
-                      <a href="#">Buy Now</a>
-                      <a href="#">Add to      Cart</a>
-                    </div>
-                    </div>
-                </div>
-              </div> </tr>
-              <ul>
-              
-                <tr>
-                <div class="Pcontainer"> 
-                  <div class="products">
-                    <div class="productPage">
-                      <div style="display: inline-block;">
-                      <img src="../Images/Comfier.jpg" width="250px" height="250px" alt="">
-                      <div class="content">
-                        <h3><a href="#">Aston Stop</a></h3>
-                        <span><a href="#">£22.87</a></span>
+                    <!-- <form th:action="@{/adding_product}" th:object="${product}"> -->
+                          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i></a></li>
                       </div>
-                      <div class="link">
-                        <a href="@{/checkout}">Buy Now</a>
-                        <a href="@{/checkout}">Add to      Cart</a>
+                      <div class="product-content">
+                        <br>
+                        <h3 class="title"><span th:text="${product.product}"></span></h3>
+                        <br>
+                        <div id=Star>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
                       </div>
-                      </div>
+                      <br>
+                      <div class="price"><span th:text=" '£' + ${product.unitPrice}"></span></div>
+                    </div>
                   </div>
                 </div>
-                <ul>
-                  <div class="Pcontainer"> 
-                    <div class="products">
-                      <div class="productPage">
-                        <div style="display: inline-block;">
-                        <img src="../Images/Hat.jpeg" width="250px" height="250px" alt="">
-                        <div class="content">
-                          <h3><a href="#">Aston Stop Hat</a></h3>
-                          <span><a href="#">£8.99</a></span>
-                        </div>
-                        <div class="link">
-                          <a href="@{/checkout}">Buy Now</a>
-                          <a href="@{/checkout}">Add to      Cart</a>
-                        </div>
-                        </div>
-                    </div>
-                  </div>
-                  <ul>
-                    <div class="Pcontainer"> 
-                      <div class="products">
-                        <div class="productPage">
-                          <div style="display: inline-block;">
-                          <img src="../Images/IpadCase.jpeg" width="250px" height="250px" alt="">
-                          <div class="content">
-                            <h3><a href="#">Aston Stop iPad</a></h3>
-                            <span><a href="#">£8.99</a></span>
-                          </div>
-                          <div class="link">
-                            <a href="@{/checkout}">Buy Now</a>
-                            <a href="@{/checkout}">Add to      Cart</a>
-                          </div>
-                          </div>
-                      </div>
-                    </div>
-                    <ul>
-                      <tr>
-                        <ul>
-                          <div class="Pcontainer"> 
-                            <div class="products">
-                              <div class="productPage">
-                                <div style="display: inline-block;">
-                                <img src="../Images/mug.jpeg" width="250px" height="250px" alt="">
-                                <div class="content">
-                                  <h3><a href="#">Aston Stop Mug</a></h3>
-                                  <span><a href="#">£10.99</a></span>
-                                </div>
-                                <div class="link">
-                                  <a href="@{/checkout}">Buy Now</a>
-                                  <a href="@{/checkout}">Add to      Cart</a>
-                                </div>
-                                </div>
-                            </div>
-                          </div>
-                          <ul>
-                            <ul>
-                              <div class="Pcontainer"> 
-                                <div class="products">
-                                  <div class="productPage">
-                                    <div style="display: inline-block;">
-                                    <img src="../Images/IpadCase2.jpeg" width="250px" height="250px" alt="">
-                                    <div class="content">
-                                      <h3><a href="#">Aston Stop iPad</a></h3>
-                                      <span><a href="#">500$</a></span>
-                                    </div>
-                                    <div class="link">
-                                      <a href="@{/checkout}">Buy Now</a>
-                                      <a href="@{/checkout}">Add to      Cart</a>
-                                    </div>
-                                    </div>
-                                </div>
-                              </div>
-                              <ul>
-                                <ul>
-                                  <div class="Pcontainer"> 
-                                    <div class="products">
-                                      <div class="productPage">
-                                        <div style="display: inline-block;">
-                                        <img src="../Images/ShowerCurtain.jpg" width="250px" height="250px" alt="">
-                                        <div class="content">
-                                          <h3><a href="#">Aston Stop Curtain</a></h3>
-                                          <span><a href="#">£8.99</a></span>
-                                        </div>
-                                        <div class="link">
-                                          <a href="@{/checkout}">Buy Now</a>
-                                          <a href="@{/checkout}">Add to      Cart</a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <ul>
-
-                      </tr>
-
-                  
-   
-  <!-- <footer>
-    <p>&copy; 2023 My Company</p>
-  </footer>
-
-</body>
-</html> -->
-
-
-
-
-<!-- 
-<footer >
-      
-  <div class="inside-footer">  
-      <div class="row">
-      
-              <div class="footer-link">
-                  <p id="contact-me">  Aston Stop</p> 
-                  <a href="contact" class="link login-link">Contact Us</a></span>
-                  <p id="contact-me" > 8 Coleshill St, Birmingham B4 7BX </p>
-                  <p id="contact-me"> <u> info@astonstop.com</u></p>
-                </div>
-     
-          <div class="professional-links">
-              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-              <div class="social-links">
-                  <a class="social" href="https://twitter.com/vscodetips" target="_blank">
-                      <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
               </div>
-              <div class="social-links">
-                  <a class="social" href="https://github.com/jonasschmedtmann" target="_blank">
-                      <ion-icon name="logo-github"></ion-icon>
-                  </a>
-              </div>
-              <div class="social-links">
-                  <a class="social" href="https://www.linkedin.com/in/random" target="_blank">
-                      <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>  
-              </div>
-              <div class="social-links">
-                  <a class="social" href="https://www.instagram.com/astonuniversity/" target="_blank">
-                      <ion-icon name="logo-instagram"></ion-icon></a>
-              </div>
-          </div>  
-          <div>
-              <div class="text-center p-3 text-gold" > All Rights Reserved Aston-Stop & Aston University UK & US 2023 - © 2023 Copyright 
-              </div>
-              </div>
+            </div>
           </div>
-      </div>
-  </div>              
-</footer> -->
-  
+
+    
+  <!-- <body> 
+        <div class="row">
+          <div th:each="product:${products}">
+            <div class="col-4" >
+              <div class="card">
+                  <img src="/src/main/resources/static/images/Hat.jpeg" alt="">
+                </div>
+                <div class="card-body">
+                  <span th:text="${product.product}"></span>
+              <span th:text=" '£' + ${product.unitPrice}"></span>
+              <span th:text="${product.stock}"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </body>
   </html>
   </x-app-layout>
