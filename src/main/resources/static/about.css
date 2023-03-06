@@ -5,11 +5,11 @@
   --color-black-1: #212b38;
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: sans-serif;
@@ -85,7 +85,7 @@ body {
     justify-content: center;
     grid-gap: 20px;
   }
-
+}
 
 @media screen and (max-width: 600px) {
   .column {
@@ -548,4 +548,4 @@ a:active {
 
 .copyright p a {
     color: steelblue;
-}d
+}

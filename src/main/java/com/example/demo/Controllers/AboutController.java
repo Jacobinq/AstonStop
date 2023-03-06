@@ -6,8 +6,8 @@ import org.springframework.stereotype.Controller;
 import ch.qos.logback.core.model.Model;
 @Controller
 public class AboutController {
-    @GetMapping("/aboutus")
+    @GetMapping("/about")
     public String Aboutus(Model model){
-        return "AboutUs";
+        return "about";
     }
 }

@@ -33,14 +33,16 @@
     <div class="menu-bar">
       <h1 class="logo">Aston<span>Stop</span></h1>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Shop </a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/products}">Shop </a></li>
+        <li><a th:href="@{/contact}">Contact</a></li>
+        <li><a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
       </ul>
     </div>
-    
+
+<ul>
+   <li>
         <!-- Slideshow Carousel start -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
