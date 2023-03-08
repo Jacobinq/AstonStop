@@ -95,3 +95,21 @@
 .Star{
   color: gold;
 }
+
+.myBtnContainer{
+  background-color: white;
+  color: blue;
+  margin: 0.6rem 0.6rem;
+  padding: 0.2rem 1rem;
+  line-height: 100px;
+  font-style: bold;
+  cursor: pointer;
+  font-size: 25px;
+  border: 3px solid var(--color-base);
+}
+
+.search{
+  line-height: 50px;
+  margin: 10px;
+
+}

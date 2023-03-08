@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="responsive.css">
 <link rel="stylesheet" href="icon.css">
 <link rel="stylesheet" href="script.js">
+<link rel="stylesheet" href="product.js">
 <link th:href="@{/products.css}" rel="stylesheet">
 <!-- <link th:href="@{/products.css}" rel="stylesheet"> -->
 <!-- <link th:href="@{/footer.css}" rel="stylesheet"> -->
@@ -31,6 +32,35 @@
   </div>
   </header>
   </div>
+
+<div class="myBtnContainer">
+  <button class="btn" onclick=""> Show all</button>
+  <button class="btn" onclick=""> Clothes</button>
+  <button class="btn" onclick=""> Bags</button>
+  <button class="btn" onclick=""> Technology</button>
+  <button class="btn" onclick=""> Accessories</button>
+  <button class="btn" onclick=""> General</button>
+
+<div style="float: right;" class="search"> 
+  <i class="fa fa-search"></i>
+  <input class="search" type="text" placeholder="" />
+</div>
+  
+</div>
+
+
+  
+  </ul>
+</div>
+                </tr>
+            </table>
+        </div>
+    </div>
+  </div>
+
+
+
+</div>
   <div class="Products"> 
     <div class="row">
       <div th:each="product:${products}">
