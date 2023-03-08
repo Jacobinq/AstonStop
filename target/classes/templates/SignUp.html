@@ -69,29 +69,26 @@
         <div class="form-content">
         <h1>Signup</h1>
         <p>Signup below it's quick and easy!</p>
-      <form action="#">
+      <form th:action="@{/processing_register}" th:object="${user}">
+
         
         <div class="field input-field">
-          <input type="First Name" placeholder="First Name" class="input">
+          <input type="First Name" placeholder="First Name" class="input" th:field="{firstname} required" >
         </div>
         
         <div class="field input-field">
-          <input type="Last Name" placeholder="Last Name" class="input">
+          <input type="Last Name" placeholder="Last Name" class="input" th:field="{lastname} required">
         </div>
         
         <div class="field input-field">
-          <input type="email" placeholder="Email" class="input">
+          <input type="email" placeholder="Email" class="input"th:field=" {email} required">
         </div>
         
         <div class="field input-field">
-          <input type="password" placeholder="Password" class="password">
+          <input type="password" placeholder="Password" class="password" th:field="{password} required">
           <i class='bx bx-hide eye-icon'></i>
         </div>
       
-        <div class="field input-field">
-          <input type="confirm password" placeholder="Confirm Password" class="Confirm password">
-          <i class='bx bx-hide eye-icon'></i>
-        </div>
         
         <div class="field button-field">
           <button>Signup</button>
