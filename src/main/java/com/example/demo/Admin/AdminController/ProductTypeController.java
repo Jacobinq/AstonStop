@@ -1,69 +1,69 @@
-package com.example.demo.Admin.AdminController;
+// package com.example.demo.Admin.AdminController;
 
-// import javax.validation.Valid;
+// // import javax.validation.Valid;
 
-import com.example.demo.Admin.model.ProductType;
+// import com.example.demo.Admin.model.ProductType;
 
-import jakarta.validation.Valid;
+// import jakarta.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.stereotype.Controller;
+// import org.springframework.ui.Model;
+// import org.springframework.validation.BindingResult;
+// import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+// import java.util.List;
 
-@Controller
-@RequestMapping("/producttype")
-public class ProductTypeController {
+// @Controller
+// @RequestMapping("/producttype")
+// public class ProductTypeController {
 
-    @Autowired
-    private com.example.demo.Admin.service.ProductTypeService productTypeService;
+//     @Autowired
+//     private com.example.demo.Admin.service.ProductTypeService productTypeService;
 
-    private String add_edit_template="/admin/producttype/add-edit-producttype";
-    private String list_template="/admin/producttype/list-producttype";
-    private String list_redirect="redirect:/admin/producttype/list";
+//     private String add_edit_template="/admin/producttype/add-edit-producttype";
+//     private String list_template="/admin/producttype/list-producttype";
+//     private String list_redirect="redirect:/admin/producttype/list";
 
-    @GetMapping("/add")
-    public String addProductType(ProductType producttype, Model model){
-        model.addAttribute("producttype", producttype);
-        return add_edit_template;
-    }
+//     @GetMapping("/add")
+//     public String addProductType(ProductType producttype, Model model){
+//         model.addAttribute("producttype", producttype);
+//         return add_edit_template;
+//     }
 
-    @GetMapping("/edit/{id}")
-    public String editProductType(@PathVariable("id") int id, Model model){
-        ProductType producttype = productTypeService.get(id);
+//     @GetMapping("/edit/{id}")
+//     public String editProductType(@PathVariable("id") int id, Model model){
+//         ProductType producttype = productTypeService.get(id);
 
-        model.addAttribute("producttype", producttype);
+//         model.addAttribute("producttype", producttype);
 
-        return add_edit_template;
-    }
+//         return add_edit_template;
+//     }
 
-    @PostMapping("/save")
-    public String saveProductType(@Valid @ModelAttribute("producttype") ProductType producttype, BindingResult result, Model model){
-        model.addAttribute("producttype", producttype);
+//     @PostMapping("/save")
+//     public String saveProductType(@Valid @ModelAttribute("producttype") ProductType producttype, BindingResult result, Model model){
+//         model.addAttribute("producttype", producttype);
 
-        if(result.hasErrors()){
-            return add_edit_template;
-        }
-        productTypeService.save(producttype);
+//         if(result.hasErrors()){
+//             return add_edit_template;
+//         }
+//         productTypeService.save(producttype);
 
-        return list_redirect;
-    }
+//         return list_redirect;
+//     }
 
-    @GetMapping("/delete/{id}")
-    public String deleteProductType(@PathVariable("id") int id, Model model) {
-        productTypeService.delete(id);
+//     @GetMapping("/delete/{id}")
+//     public String deleteProductType(@PathVariable("id") int id, Model model) {
+//         productTypeService.delete(id);
 
-        return list_redirect;
-    }
+//         return list_redirect;
+//     }
 
-    @GetMapping("/list")
-    public String listProductType(Model model) {
-        List<ProductType> listProductTypes = productTypeService.listAll();
-        model.addAttribute("listProductTypes", listProductTypes);
+//     @GetMapping("/list")
+//     public String listProductType(Model model) {
+//         List<ProductType> listProductTypes = productTypeService.listAll();
+//         model.addAttribute("listProductTypes", listProductTypes);
 
-        return list_template;
-    }
-}
+//         return list_template;
+//     }
+// }
