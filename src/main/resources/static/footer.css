@@ -6,7 +6,8 @@ blockquote {
   footer {
     height: 220px;
     background-color: #7a91df;
-    color: #aab4d0;    
+    color: lightblue;    
+    padding-top: 10%;
   }
   
   .inside-footer {
