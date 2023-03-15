@@ -24,14 +24,25 @@ public class CheckOutController {
     ProductBasketRepository productBasketRepository;
     @Autowired
     BasketRepository basketRepository;
+    
 
 
-    @GetMapping("/basket")
+    @GetMapping("/checkout")
     public String basket(Model model){
         // Optional<Basket> basket = BasketRepository.findByUser(user);
         // model.addAttribute("basket", basketRepository.findByUser(User.getFirstName()).get());
         // model.addAttribute("product", basketRepository.get());
-        return "basket";
+        return "checkout";
     }
-
+    
+    @PostMapping("/add")
+    public String basketAdd(Model model){
+        // basket.get().addProduct(product.get(), quantity);
+        // basketService.save(basket.get());
+    
+        return "basketAdd";
+    }
 }
+
+
+

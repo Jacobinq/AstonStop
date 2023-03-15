@@ -10,6 +10,7 @@ import jakarta.persistence.Column;
 
 @Entity
 @Data
+
 @Table(name = "users")
 public class User {
     @Id
@@ -21,16 +22,28 @@ public class User {
     private String name;
     @Column(nullable = false, length = 20)
     private String password;
+    @Column(nullable = false, length = 20)
+    private String roles;
 
-    public User(Long id, String email, String firstName, String password){
+    public User(Long id, String email, String firstName, String password, String roles){
         this.email = email;
         this.name = firstName;
         this.password = password;
+        this.roles = roles;
 
     }
     public User(){
     
 
+    }
+    @Override
+    public String toString() {
+        return "SecurityUser{" +
+                "id=" + id +
+                ", username='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", roles='" + roles + '\'' +
+                '}';
     }
   
 }

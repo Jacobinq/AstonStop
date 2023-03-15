@@ -41,22 +41,30 @@
           <li><a th:href="@{/products}">Shop </a></li>
           <li><a th:href="@{/contact}">Contact</a></li>
           <li><a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
+          <li><a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></a></i></li>
         </ul>
       </div>
-    
-    <!--sign up and login forms -->
+      <!DOCTYPE html>
+
+    <!-- sign up and login forms -->
     <section class="container forms">
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="#">
+                    <form th:action="@{/login}" method="post">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input type="text" placeholder="text" class="input">
                         </div>
 
                         <div class="field input-field">
                             <input type="password" placeholder="Password" class="password">
                             <i class='bx bx-hide eye-icon'></i>
+                        </div>
+                        <div th:if="${param.error}">
+                            Invalid username and password.
+                        </div>
+                        <div th:if="${param.logout}">
+                            You have been logged out.
                         </div>
 
                         <div class="form-link">
@@ -72,20 +80,20 @@
                         <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Signup Form -->
 
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form action="#">
+                    <form th:action="@{/Register}" th:object="${User}" method="post">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input">
+                            <input id="email" type="email" placeholder="Email" th:field="*{email}">
                         </div>
 
                         <div class="field input-field">
-                            <input type="password" placeholder="Create password" class="password">
+                            <input id="password" type="password" placeholder="Create password" th:field="*{password}">
                         </div>
 
                         <div class="field input-field">
@@ -103,7 +111,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
 
     <!-- footer section start -->
     <div class="footer">
@@ -158,4 +166,4 @@
     <script src="script.js"></script>
 
   </body>
-</html>
+</html> --> -->
