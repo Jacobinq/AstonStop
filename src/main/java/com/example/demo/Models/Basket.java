@@ -32,6 +32,10 @@ public class Basket {
 
 
     }
+    
+    public Basket(User user){
+        this.User = user;
+    }
 
     public void addProduct(Product product, int quantity){
         ProductBasket existingItem = findBasketProductByProduct(product);

@@ -1,152 +1,30 @@
-<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstonStop Landing Page</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link th:href="@{/index.css}" rel="stylesheet">
-<link th:href="@{/footer.css}" rel="stylesheet">
-<link th:href="@{/signup.css}" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+        <!-- Signup Form -->
 
-<header>
-<nav class="menu-container"> 
-    <div class="menu">
-      <ul>
-        <li>
-          <a th:href="@{/}">
-            Home
-        </li>
-        <li>
-            <a th:href="@{/products}">
-            Products
-          </b>
-        </li>
-        <li>
-            <a th:href="@{/aboutus}">
-            About
-          </a>
-        </li>
-        <li>
-            <a th:href="@{/contact}">
-            Contact
-          </a>
-        </li>
-      </ul>
-      <ul>
-         <li>
-            <a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a>
-        </li>
-
-          </a>
-          <li>
-            <a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></a></i>
-          </li>
-      </ul>
-    </div>
-  </nav>
-</header>
-
-<body>
-
-  <!-- <div class="  "> 
-        <tr> 
-            <td>
-                <div class="hero">
-                    <img src="../Images/signup.jpeg">
-    
-            </td>
-    </div>
-    </tr>
-    </div> -->
-
-    <div class="signup-container">
-      <div class="form">
-        <div class="form-content">
-        <h1>Signup</h1>
-        <p>Signup below it's quick and easy!</p>
-      <form th:action="@{/processing_register}" th:object="${user}">
-
-        
-        <div class="field input-field">
-          <input type="First Name" placeholder="First Name" class="input" th:field="{firstname} required" >
-        </div>
-        
-        <div class="field input-field">
-          <input type="Last Name" placeholder="Last Name" class="input" th:field="{lastname} required">
-        </div>
-        
-        <div class="field input-field">
-          <input type="email" placeholder="Email" class="input"th:field=" {email} required">
-        </div>
-        
-        <div class="field input-field">
-          <input type="password" placeholder="Password" class="password" th:field="{password} required">
-          <i class='bx bx-hide eye-icon'></i>
-        </div>
-      
-        
-        <div class="field button-field">
-          <button>Signup</button>
-        </div>
-          <span>Already have an account? <a th:href="@{/login}">Login Here</a></span>
-          <div class="form-link">
-        
-          
-      </div>
-
-      </form>
-      </div>
-    </div>
-
-    <!-- <footer >
-      
-      <div class="inside-footer">  
-          <div class="row">
-          
-                  <div class="footer-link">
-                      <p id="contact-me">  Aston Stop</p> 
-                      <a href="contact" class="link login-link">Contact Us</a></span>
-                      <p id="contact-me" > 8 Coleshill St, Birmingham B4 7BX </p>
-                      <p id="contact-me"> <u> info@astonstop.com</u></p>
-                    </div>
-         
-              <div class="professional-links">
-                  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                  <div class="social-links">
-                      <a class="social" href="https://twitter.com/vscodetips" target="_blank">
-                          <ion-icon name="logo-twitter"></ion-icon>
-                      </a>
+        <div class="form signup">
+          <div class="form-content">
+              <header>Signup</header>
+              <form th:action="@{/register}" th:object="${User}" method="post">
+                  <div class="field input-field">
+                      <input id="email" type="email" placeholder="Email" th:field="*{email}">
                   </div>
-                  <div class="social-links">
-                      <a class="social" href="https://github.com/jonasschmedtmann" target="_blank">
-                          <ion-icon name="logo-github"></ion-icon>
-                      </a>
+
+                  <div class="field input-field">
+                      <input id="password" type="password" placeholder="Create password" th:field="*{password}">
                   </div>
-                  <div class="social-links">
-                      <a class="social" href="https://www.linkedin.com/in/random" target="_blank">
-                          <ion-icon name="logo-linkedin"></ion-icon>
-                      </a>  
+
+                  <div class="field input-field">
+                      <input type="password" placeholder="Confirm password" class="password">
+                      <i class='bx bx-hide eye-icon'></i>
                   </div>
-                  <div class="social-links">
-                      <a class="social" href="https://www.instagram.com/astonuniversity/" target="_blank">
-                          <ion-icon name="logo-instagram"></ion-icon></a>
+
+                  <div class="field button-field">
+                      <button>Signup</button>
                   </div>
-              </div>  
-              <div>
-                  <div class="text-center p-3 text-gold" > All Rights Reserved Aston-Stop & Aston University UK & US 2023 - © 2023 Copyright 
-                  </div>
-                  </div>
+              </form>
+
+              <div class="form-link">
+                  <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
               </div>
           </div>
-      </div>              
-  </footer> -->
-  
-    
-</body>
-</html>
+      </div>
+  </section> 
