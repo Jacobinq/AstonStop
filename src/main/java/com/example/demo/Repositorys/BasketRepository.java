@@ -9,5 +9,6 @@ import com.example.demo.Models.User;
 
 @Repository
 public interface BasketRepository extends JpaRepository<Basket,Long> {
+
     // Optional<Basket> findByUser(User user);
 }

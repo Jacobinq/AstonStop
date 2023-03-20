@@ -8,6 +8,6 @@ import com.example.demo.Models.Basket;
 import com.example.demo.Models.ProductBasket;
 
 @Repository
-public interface ProductBasketRepository extends JpaRepository<Basket,Long> {
+public interface ProductBasketRepository extends JpaRepository<ProductBasket,Long> {
     // Optional<ProductBasket> findById(ProductBasket ProductBasket);
 }

@@ -20,18 +20,12 @@ import com.example.demo.Models.Product;
 @Table(name = "basket")
 public class Basket {
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     @OneToOne
     private User User;
     @OneToMany(mappedBy = "BasketID", cascade = CascadeType.ALL)
     private List<ProductBasket> productBaskets = new ArrayList<>();
-
-    public Basket(Long id, User User){
-        this.id = id;
-        this.User = User;
-
-
-    }
     
     public Basket(User user){
         this.User = user;
