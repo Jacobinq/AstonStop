@@ -26,28 +26,14 @@ public class Basket {
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
-    @OneToMany(mappedBy = "BasketID", cascade = CascadeType.ALL)
-    private List<ProductBasket> productBaskets = new ArrayList<>();
-    
-    public Basket(User user){
-        this.user = user;
-    }
+    private String productName;
+    private String image;
+    private String productDescription;
+    private int unitPrice;
+    private String productType;
 
-    public void addProduct(Product product, int quantity){
-        ProductBasket existingItem = findBasketProductByProduct(product);
-        if (existingItem != null) {
-            existingItem.setQuantity(existingItem.getQuantity() + quantity);
-        } else {
-            ProductBasket newItem = new ProductBasket(product, quantity, this);
-            productBaskets.add(newItem);
-        }
-    }
-    private ProductBasket findBasketProductByProduct(Product product) {
-        for (ProductBasket basketProduct : productBaskets) {
-            if (basketProduct.getProduct().equals(product)) {
-                return basketProduct;
-            }
-        }
-        return null;
-    }
+
+   
+
+
 }

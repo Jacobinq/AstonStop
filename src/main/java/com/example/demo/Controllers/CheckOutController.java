@@ -2,6 +2,7 @@ package com.example.demo.Controllers;
 // import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.engine.AttributeName;
 
@@ -14,6 +15,9 @@ import com.example.demo.Models.User;
 import com.example.demo.Repositorys.ProductBasketRepository;
 import com.example.demo.Repositorys.ProductRepository;
 import com.example.demo.Security.SecurityUser;
+
+import groovyjarjarantlr4.runtime.misc.IntArray;
+
 import com.example.demo.Repositorys.BasketRepository;
 
 
@@ -39,27 +43,34 @@ public class CheckOutController {
         
         User user = SecurityUser.getUser();
         Optional<Basket> basket = basketRepository.findByUser(user);
-        model.addAttribute("basket", basket.get());
-        model.addAttribute("product", basket.get().getProductBaskets());
+        model.addAttribute("baskets", basket);
+        model.addAttribute("basket", new Basket());
         return "checkout";
     }
 
 
     
-    @PostMapping("/add")
-    public String basketAdd(@RequestParam ("product") Long product,@RequestParam ("quantity") int quantity, Model model  ){
+    @GetMapping("/add")
+    public String basketAdd(@RequestParam String productName,@RequestParam int unitPrice, @RequestParam int quantity, Model model  ){
         User user = SecurityUser.getUser();
-        Optional<Basket> basket = basketRepository.findByUser(user);
-        Optional<Product> products = productRepository.findById(product);
-        if(!basket.isPresent()){
-            Basket newBasket = new Basket(user);
-            basketRepository.save(newBasket);
-            basket = Optional.of(newBasket);
-        }
-        basket.get().addProduct(products.get(), quantity);
-        productBasketRepository.save(null);
+        Basket newBasket = new Basket();
+        newBasket.setProductName(productName);
+        newBasket.setUnitPrice(unitPrice);
+        newBasket.setUser(user);
+        basketRepository.save(newBasket);
+
+
+
+        // Optional<Basket> basket = basketRepository.findByUser(user);
+        // Optional<Product> products = productRepository.findById(Long.parseLong(productName));
+        // if(basket.isPresent()){
+        //     Basket newBasket = new Basket(user);
+        //     basket = Optional.of(newBasket);
+        // }
+        // basket.get().addProduct(products.get(), quantity);
+        // productBasketRepository.save(newBasket);
     
-        return "basketAdd";
+        return "products";
     }
 }
 
