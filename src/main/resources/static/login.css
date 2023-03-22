@@ -15,8 +15,9 @@
     column-gap: 30px;
 }
 .form.login{
-    background-color: #0171d3;
+    background-color: #538fc3;
 }
+
 .form{
     position: absolute;
     max-width: 430px;
