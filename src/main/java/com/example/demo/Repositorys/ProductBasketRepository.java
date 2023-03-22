@@ -9,5 +9,5 @@ import com.example.demo.Models.ProductBasket;
 
 @Repository
 public interface ProductBasketRepository extends JpaRepository<ProductBasket,Long> {
-    // Optional<ProductBasket> findById(ProductBasket ProductBasket);
+    Optional<ProductBasket> findById(ProductBasket ProductBasket);
 }

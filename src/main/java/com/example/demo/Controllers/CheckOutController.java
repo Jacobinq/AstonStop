@@ -23,42 +23,44 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 @Controller
 public class CheckOutController {
-    // @Autowired
-    // private ProductBasketRepository productBasketRepository;
-    // @Autowired
-    // private BasketRepository basketRepository;
-    // @Autowired
-    // ProductRepository productRepository;
+    @Autowired
+    private ProductBasketRepository productBasketRepository;
+    @Autowired
+    private BasketRepository basketRepository;
+    @Autowired
+    ProductRepository productRepository;
 
     
     
 
 
-    // @GetMapping("/checkout")
-    // public String basket(Model model){
+    @PostMapping("/checkout")
+    public String basket(Model model){
         
-    //     // User user = SecurityUser.getUser();
-    //     // Optional<Basket> basket = basketRepository.findByUser(user);
-    //     // model.addAttribute("basket", basket.get());
-    //     // model.addAttribute("product", basket.get().getProductBaskets());
-    //     return "checkout";
-    // }
+        User user = SecurityUser.getUser();
+        Optional<Basket> basket = basketRepository.findByUser(user);
+        model.addAttribute("basket", basket.get());
+        model.addAttribute("product", basket.get().getProductBaskets());
+        return "checkout";
+    }
+
+
     
-    // @PostMapping("/add")
-    // public String basketAdd(@RequestParam ("product") Long product,@RequestParam ("quantity") int quantity, Model model  ){
-    //     User user = SecurityUser.getUser();
-    //     Optional<Basket> basket = basketRepository.findByUser(user);
-    //     Optional<Product> products = productRepository.findById(product);
-    //     if(!basket.isPresent()){
-    //         Basket newBasket = new Basket(user);
-    //         basketRepository.save(newBasket);
-    //         basket = Optional.of(newBasket);
-    //     }
-    //     basket.get().addProduct(products.get(), quantity);
-    //     // productBasketRepository.save();
+    @PostMapping("/add")
+    public String basketAdd(@RequestParam ("product") Long product,@RequestParam ("quantity") int quantity, Model model  ){
+        User user = SecurityUser.getUser();
+        Optional<Basket> basket = basketRepository.findByUser(user);
+        Optional<Product> products = productRepository.findById(product);
+        if(!basket.isPresent()){
+            Basket newBasket = new Basket(user);
+            basketRepository.save(newBasket);
+            basket = Optional.of(newBasket);
+        }
+        basket.get().addProduct(products.get(), quantity);
+        productBasketRepository.save(null);
     
-    //     return "basketAdd";
-    // }
+        return "basketAdd";
+    }
 }
 
 
