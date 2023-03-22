@@ -1,0 +1,30 @@
+        <!-- Signup Form -->
+
+        <div class="form signup">
+          <div class="form-content">
+              <header>Signup</header>
+              <form th:action="@{/register}" th:object="${User}" method="post">
+                  <div class="field input-field">
+                      <input id="email" type="email" placeholder="Email" th:field="*{email}">
+                  </div>
+
+                  <div class="field input-field">
+                      <input id="password" type="password" placeholder="Create password" th:field="*{password}">
+                  </div>
+
+                  <div class="field input-field">
+                      <input type="password" placeholder="Confirm password" class="password">
+                      <i class='bx bx-hide eye-icon'></i>
+                  </div>
+
+                  <div class="field button-field">
+                      <button>Signup</button>
+                  </div>
+              </form>
+
+              <div class="form-link">
+                  <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+              </div>
+          </div>
+      </div>
+  </section> 
