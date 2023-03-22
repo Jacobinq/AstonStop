@@ -1,0 +1,157 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/Admin.css}"  rel="stylesheet">
+    <link th:href="@{//AdminNav.css}"  rel="stylesheet">
+
+    <link href="Admin.css"  rel="stylesheet">
+    <link href="AdminNav.css"  rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+</head>
+
+<header>
+    <nav class="menu-container"> 
+        <div class="menu">
+          <ul>
+            <li>
+              <a th:href="@{/admin}">
+                Home
+            </li>
+            <li>
+                <a th:href="@{/Orders}">
+                Orders
+              </b>
+            </li>
+            <li>
+                <a th:href="@{/Roles}">
+                Roles
+              </a>
+            </li>
+            <li>
+                <a th:href="@{/Vendors}">
+                Vendors
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <li>
+                <a th:href="@{/logout}"><i class="fa fa-fw fa-user"></i> Logout</a>
+            </li>
+
+              </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<body> 
+    <div class="mainSection">
+        
+        <div class="bar">           
+           
+            
+
+        </div>
+        
+       
+
+
+
+        <h1>Business Performance</h1>
+        <p>note: these values are automatically updated/calculated from database</p>
+    <div class="Cards">
+        
+        <div class="card">
+            <div>
+                <div class="figure">£1000</div>
+                <div class="cardName">Total Revenue </div>
+            </div>
+
+            <div class="CardIcon">
+                <i class="bi bi-cash-stack"></i>
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="figure">50</div>
+                <div class="cardName">Total Sales</div>
+            </div>
+
+            <div class="CardIcon">
+                <i class="bi bi-cart-dash"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <div class="cardHeader">
+        <h1>Inventory Management</h1>
+        <div class="search" style= "margin-left: 50%;">
+          <label>
+              <input type="text" placeholder="Search">
+              <i class="bi bi-search"></i>
+          </label>
+      </div>
+      
+        <div class="Header">
+            <h2>Products</h2>
+            
+        </div>
+        <p>note: this can also be the report regarding stock levels</p>
+       
+    </div>
+
+<!--     
+    <div class="ProductTable">
+
+
+        <form method="post" th:action="@{/admin/productAdd}" th:object="${product}"> 
+            <input id="productName" placeholder="name" type="text" th:field="*{productName}">
+            <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
+            <input id="price" placeholder="Price" type="text" th:field="*{unitPrice}">
+            <input id="description" placeholder="Description" type="text" th:field="*{productDescription}">
+            <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
+            <input type="submit">
+        </form>
+    </div> -->
+
+    
+        <div class="TableDesign">
+        <table>
+                <thead id="column">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Type</td>
+                        <td>Price</td>
+                        <td>Image</td>
+                        <td>Description</td>
+                        <td>Stock</td>
+                        <td>Delete</td>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="product : ${products}">
+                    <input type="hidden" name="id" th:value="${product.productID}">
+                    <td th:text="${product.productName}"></td>
+                    <td th:text="${product.productType}"></td>
+                    <td th:text="${product.unitPrice}"></td>
+                    <td th:text="${product.productDescription}"></td>
+                    <td th:text="${product.Stock}"></td>
+                    <td></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+    
+    </div>
+
+    
+
+</body>
+

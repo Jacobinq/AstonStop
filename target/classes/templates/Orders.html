@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+
+    <link th:href="@{/css/Admin.css}"  rel="stylesheet">
+    <link href="Admin.css"  rel="stylesheet">
+    <link th:href="@{/css/AdminNav.css}"  rel="stylesheet">
+    <link href="AdminNav.css"  rel="stylesheet">
+
+
+    <header>
+        <nav class="menu-container"> 
+            <div class="menu">
+              <ul>
+                <li>
+                  <a th:href="@{/admin}">
+                    Home
+                </li>
+                <li>
+                    <a th:href="@{/Orders}">
+                    Orders
+                  </b>
+                </li>
+                <li>
+                    <a th:href="@{/Roles}">
+                    Roles
+                  </a>
+                </li>
+                <li>
+                    <a th:href="@{/Vendors}">
+                    Vendors
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <li>
+                    <a th:href="@{/logout}"><i class="fa fa-fw fa-user"></i> Logout</a>
+                </li>
+    
+                  </a>
+              </ul>
+            </div>
+          </nav>
+        </header>
+</div>
+        <div class="search">
+            <label>
+                <input type="text" placeholder="Search">
+                <i class="bi bi-search"></i>
+            </label>
+        </div>
+        
+        
+
+    </div>
+    
+   
+   
+
+    <button type="button">View incoming orders</button> 
+    <button type="button">View outgoing orders</button> 
+    <p>note:incoming order has status = processing. outgoing order=out for delivery</p>
+    <br><br>
+<div class="TableDesign">
+    <div class="Header">
+        <h2>Orders</h2>
+        
+    </div>
+    <table>
+        <thead id="column">
+            <tr>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Status</td>
+               
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Name 1</td>
+                <td>£100</td>
+                <td><span class="delivered">Delivered</span></td>
+                <td><button type="button">Change Order Status</button></td>
+            </tr>
+
+            <tr>
+                <td>Product 2</td>
+                <td>£499</td>
+                <td><span class="processing">Processing</span></td>
+                <td><button type="button">Change Order Status</button></td>
+               
+            </tr>
+
+            <tr>
+                <td>Product 3</td>
+                <td>£200</td>
+                <td><span class=" out-for-delivery">Out for delivery</span></td>
+                <td><button type="button">Change Order Status</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+   
+</body>
+</html>
