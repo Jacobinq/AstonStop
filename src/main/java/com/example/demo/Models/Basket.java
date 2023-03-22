@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -23,12 +24,13 @@ public class Basket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @OneToOne
-    private User User;
+    @JoinColumn(name = "user_id")
+    private User user;
     @OneToMany(mappedBy = "BasketID", cascade = CascadeType.ALL)
     private List<ProductBasket> productBaskets = new ArrayList<>();
     
     public Basket(User user){
-        this.User = user;
+        this.user = user;
     }
 
     public void addProduct(Product product, int quantity){

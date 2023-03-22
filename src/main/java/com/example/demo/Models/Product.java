@@ -17,19 +17,26 @@ public class Product {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     @Column(nullable = false, length = 20)
-    private String product;
+    private String productName;
     @Column(nullable = false, length = 20)
     private String image;
+    @Column(nullable = false, length = 20)
+    private String productDescription;
      @Column(nullable = false, length = 20)
     private int stock;
     @Column(nullable = false, length = 20)
     private Double unitPrice;
+    @Column(nullable = false, length = 20)
+    private String productType;
 
-    public Product(long id, String product, int stock, double unitPrice) {
+    public Product(long id, String productName, int stock, double unitPrice, String productDescription,String productType ) {
         this.id = id;
-        this.product = product;
+        this.productName = productName;
         this.stock = stock;
         this.unitPrice = unitPrice;
+        this.productDescription = productDescription;
+        this.productType = productType;
+
     }
 
 }
