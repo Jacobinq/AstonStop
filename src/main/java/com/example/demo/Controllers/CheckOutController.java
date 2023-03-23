@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.engine.AttributeName;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,13 +39,12 @@ public class CheckOutController {
     
 
 
-    @PostMapping("/checkout")
+    @GetMapping("/checkout")
     public String basket(Model model){
-        
         User user = SecurityUser.getUser();
-        Optional<Basket> basket = basketRepository.findByUser(user);
-        model.addAttribute("baskets", basket);
-        model.addAttribute("basket", new Basket());
+        List<Optional<Basket>> ListBasket = new ArrayList<>();
+        ListBasket = basketRepository.findAllById(user);
+        model.addAttribute("baskets", ListBasket);
         return "checkout";
     }
 

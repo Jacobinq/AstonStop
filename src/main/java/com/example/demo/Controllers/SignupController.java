@@ -23,14 +23,6 @@ public class SignupController {
         return "signup";
 
     }
-    
-    @PostMapping("/process_register")
-    public String processRegister(User user) {
-        Repo.save(user);
-     
-    
-    return "register_success";
-    }
 }
 
     
