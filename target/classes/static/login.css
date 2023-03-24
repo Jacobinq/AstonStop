@@ -14,12 +14,12 @@
     justify-content: center;
     column-gap: 30px;
 }
-.form.login{
-  /* background-color: #daad33 ; */
+/* .form.login{
+  background-color: #daad33 ;
   position: relative;
-  width: 380px;
-  height: 420px;
-  background: #232836;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
   border-radius: 8px;
   overflow: hidden;
 
@@ -30,8 +30,9 @@
   top: -50%;
   left: -50%;
   position: absolute;
-  width: 380px;
-  height: 420px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
   background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -42,8 +43,9 @@
   top: -50%;
   left: -50%;
   position: absolute;
-  width: 380px;
-  height: 420px;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
   background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -59,6 +61,15 @@
       transform: rotate(360deg);
   }
 }
+
+.form-content{
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #232836;
+  z-index: 10;
+} */
+
 
 .form{
     position: absolute;
