@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Contact Us Page*/
 .contact {
     padding: 5rem 0;
-    font-family: 'Berlin Sans FB';
 }
 
 .contact-wrap {
@@ -76,6 +82,7 @@
     width: 100%;
     height: 100%;
     border: none;
+    border-radius: 10px;
     outline: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -104,6 +111,7 @@ input[type=number] {
     height: 200px;
     width: 100%;
     border: none;
+    border-radius: 10px;
     outline: none;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
