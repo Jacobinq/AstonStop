@@ -21,6 +21,7 @@
   position: relative;
   width: 450px;
   height: 550px;
+  border: none;
   border-radius: 8px;
   overflow: hidden;
 
