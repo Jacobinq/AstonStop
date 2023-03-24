@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 .container{
     height: 100vh;
     width: 100%;
@@ -14,12 +15,12 @@
     justify-content: center;
     column-gap: 30px;
 }
-/* .form.login{
-  background-color: #daad33 ;
+
+.form.login{
+  background-color: #dbaf36 ;
   position: relative;
-    max-width: 430px;
-    width: 100%;
-    padding: 30px;
+  width: 450px;
+  height: 550px;
   border-radius: 8px;
   overflow: hidden;
 
@@ -30,10 +31,9 @@
   top: -50%;
   left: -50%;
   position: absolute;
-    max-width: 430px;
-    width: 100%;
-    padding: 30px;
-  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  width: 450px;
+  height: 550px;
+  background: linear-gradient(0deg,transparent,#0da6ab,#0da6ab);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
 
@@ -43,10 +43,9 @@
   top: -50%;
   left: -50%;
   position: absolute;
-    max-width: 430px;
-    width: 100%;
-    padding: 30px;
-  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  width: 450px;
+  height: 550px;
+  background: linear-gradient(0deg,transparent,#0da6ab,#0da6ab);
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
   animation-delay: -3s;
@@ -66,15 +65,15 @@
   position: absolute;
   inset: 2px;
   border-radius: 8px;
-  background: #232836;
+  background: #ffffff;
   z-index: 10;
-} */
+}
 
 
 .form{
     position: absolute;
-    max-width: 430px;
-    width: 100%;
+    /* max-width: 430px;
+    width: 100%; */
     padding: 30px;
     border-radius: 10px;
     background: #FFF;
@@ -94,13 +93,14 @@
     pointer-events: none;
 }
 header{
+  margin-top: 20px;
     font-size: 28px;
     font-weight: 600;
-    color: #232836;
+    color: #89330a;
     text-align: center;
 }
 form{
-    margin-top: 30px;
+    padding: 30px;
 }
 .form .field{
     position: relative;
@@ -138,12 +138,12 @@ form{
 }
 .field button{
     color: #fff;
-    background-color: #0a8a8e;
+    background-color: #dbaf36;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 .field button:hover{
-    background-color: #0f696c;
+    background-color: #b58c1d;
 }
 .form-link{
     text-align: center;
@@ -163,7 +163,7 @@ form{
     text-decoration: underline;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     .form{
         padding: 20px 10px;
     }
