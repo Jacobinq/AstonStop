@@ -15,7 +15,49 @@
     column-gap: 30px;
 }
 .form.login{
-    background-color: #538fc3;
+  /* background-color: #daad33 ; */
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #232836;
+  border-radius: 8px;
+  overflow: hidden;
+
+
+}
+.form.login::before{
+  content: '';
+  top: -50%;
+  left: -50%;
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+
+}
+.form.login::after{
+  content: '';
+  top: -50%;
+  left: -50%;
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+
+}
+
+@keyframes animate {
+  0% {
+      transorm: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
 }
 
 .form{
@@ -27,6 +69,7 @@
     background: #FFF;
     border: 1px solid black;
 }
+/* sign up */
 .form.signup{
     opacity: 0;
     pointer-events: none;
@@ -84,12 +127,12 @@ form{
 }
 .field button{
     color: #fff;
-    background-color: #0171d3;
+    background-color: #0a8a8e;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 .field button:hover{
-    background-color: #016dcb;
+    background-color: #0f696c;
 }
 .form-link{
     text-align: center;
@@ -218,3 +261,5 @@ form{
     text-decoration: none;
   }
    */
+
+   
