@@ -40,27 +40,66 @@
         <li><a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login/Register</a></li>
       </ul>
     </div>
+ <!-- <p th:text="${basket.productName}">
+            <h3 th:text="${basket.productName}"> </h3>
+            <h3 th:text="'£' + ${product.unitPrice"> </h3>
+            <h3 th:text="${product.quantity"> </h3>
+        </p>                      
+         -->
+        <!-- <div class="container">
+            <h1>BASKET</h1>
+            <table>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+                <tr th:each="baskets:${basket}"> -->
+                    <!-- <td th:text="${basket.productName}"></td>
+                    <td th:text="${basket.productName}"></td>
+                    <td th:text="${basket.productName}"></td> -->
+                   
+
+
+                    <!-- <img class="pic-1" th:src="@{Images/}+${product.image}"> -->
+
+                        <!-- <span th:text="quantity">1</span> -->
+                    <!-- </td> -->
+                    <!-- <td th:text="${basket.total}">£</td> --> 
+                    <!-- <td> -->
+                        <!-- <form th:action="@{deleteBasket}" method="post"> -->
+                            <!-- <input type="hidden" th:name="UserId" th:value="${basket.basketID}" /> -->
+                            <!-- <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+        
+        </div>
+        <br>
+        <br>
+        <br> -->
+        <!-- <div class="container">
+        
+            <h2>Total Price:</h2>
+            <h2 th:text="${Total}"></h2>
+            <form th:action="@{checkout}" method="post">
+                <button type="submit">Buy</button>
+            </form>
+            <form th:action="@{clearAll}" method="post">
+                <button type="submit">Clear all</button>
+            </form>
+        </div> -->
+        
+        </html>
 
 
 
-<div class="Basket">
-  <div th:each="basket:${basket}">
-      <div class="Pcontainer"> 
-          <div class="products">
-            <div class="productPage">
-              <div style="display: inline-block;">
-              <!-- <img src="..." th:src="${product.image}" width="250px" height="250px" alt=""> -->
-              <div class="content">
-                <h3 th:text="${product.product}"> </h3>
-                  <h3 th:text="'£' + ${product.unit_price"> </h3>
-                  <h3 th:text="${product.stock"> </h3>
-
-              </div>
-              <div class="link">
-                <a href="@{/checkout}">Buy Now</a>
-                <a href="@{/checkout}">Add to      Cart</a>
-              </div>
-              </div>
           </div>
         </div>
         <ul>
