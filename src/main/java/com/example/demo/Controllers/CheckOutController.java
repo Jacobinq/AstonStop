@@ -23,6 +23,8 @@ import com.example.demo.Repositorys.BasketRepository;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -42,21 +44,26 @@ public class CheckOutController {
     @GetMapping("/checkout")
     public String basket(Model model){
         User user = SecurityUser.getUser();
-        List<Optional<Basket>> ListBasket = new ArrayList<>();
-        ListBasket = basketRepository.findAllById(user);
-        model.addAttribute("baskets", ListBasket);
+        Optional<Basket> TestBasket = basketRepository.findBasketByUser(user);
+        if (TestBasket.isPresent()) {
+            model.addAttribute("basket", TestBasket.get());
+        } else {
+            model.addAttribute("basket", null);
+        }
         return "checkout";
     }
 
 
     
     @GetMapping("/add")
-    public String basketAdd(@RequestParam String productName,@RequestParam int unitPrice, @RequestParam int quantity, Model model  ){
+    public String basketAdd(@RequestParam String productName,@RequestParam int unitPrice, @RequestParam int quantity, String image, Model model  ){
         User user = SecurityUser.getUser();
         Basket newBasket = new Basket();
         newBasket.setProductName(productName);
         newBasket.setUnitPrice(unitPrice);
         newBasket.setUser(user);
+        newBasket.setImage(image);
+        newBasket.setQuantity(quantity);
         basketRepository.save(newBasket);
 
 

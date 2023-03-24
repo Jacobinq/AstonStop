@@ -30,10 +30,18 @@ public class Basket {
     private String image;
     private String productDescription;
     private int unitPrice;
+    private int quantity;
     private String productType;
 
 
-   
+    public String getProductName() { // Add this getter
+        return productName;
+    }
+
+    public void setProductName(String productName) { // Add this setter
+        this.productName = productName;
+    }
 
 
 }
+
