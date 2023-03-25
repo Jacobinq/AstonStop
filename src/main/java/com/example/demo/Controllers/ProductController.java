@@ -1,4 +1,7 @@
 package com.example.demo.Controllers;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 // import org.springframework.security.access.prepost.PreAuthorize;
@@ -7,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.Models.Product;
 import com.example.demo.Repositorys.ProductRepository;
 
 
@@ -22,18 +26,27 @@ public class ProductController {
         model.addAttribute("products", ProductRepository.findAll());
         return "Products";
     }
-    // @PostMapping("/filter")
-    //     public String filter(@RequestParam String name,Model model) {
-    //         List<Product> product = productService.fetchByType(name);
-    //         model.addAttribute("product", product);
-    //         return "Product/jewellery";
-    //     }
-    //     @PostMapping("/search")
-    //     public String search(@RequestParam String name,Model model) {
-    //         List<Product> product = productService.fetchByName(name);
-    //         model.addAttribute("product", product);
-    //         return "Product/jewellery";
-    //     }
 
 }
+// @GetMapping("/products/search")
+// public String storeSearch(@RequestParam("searchValue") String search, Model model) {
+//     List<Product> allProducts = ProductRepository.findAll();
+//     List<Product> result = new ArrayList<Product>();
+//     for (Product product : allProducts) {
+//         if (product.getProductName().toLowerCase().contains(search.toLowerCase())) {
+//             result.add(product);
+//         }
+//     }
+//     if (result.isEmpty()) {
+//         String error = "No items for that search";
+//         model.addAttribute("error", error);
+//         return "store";
+//     } else {
+//         String size = Integer.toString(result.size());
+//         model.addAttribute("products", result);
+//         model.addAttribute("size", size);
+//         return "store";
+//     }
+// }
+// }
 

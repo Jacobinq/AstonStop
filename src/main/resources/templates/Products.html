@@ -42,9 +42,9 @@
   <button class="btn" onclick=""> Accessories</button>
   <button class="btn" onclick=""> General</button>
 
-<div style="float: right;" class="search"> 
+<div style="float: right;" class="search" th:action="@{/product/search}"> 
   <i class="fa fa-search"></i>
-  <input class="search" type="text" placeholder="" />
+  <input class="search" type="text" placeholder="" th:name = "searchValue" />
 </div>
   
 </div>

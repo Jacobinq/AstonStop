@@ -28,6 +28,10 @@ public class SecurityUser implements UserDetails {
         return user;
     }
 
+    public static long getUserID(){
+        return user.getId();
+    }
+
     @Override
     public String getUsername() {
         return user.getName();
