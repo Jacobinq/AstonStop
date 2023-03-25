@@ -135,15 +135,12 @@
   }
   
   .Cards .card .cardName {
-    color:#5c5a5a;
+    color:#d21414;
     font-size: 1.5rem;
     margin-top: 5px;
   }
   
-  .Cards .card .CardIcon{
-    font-size: 3.5rem;
-    color: red
-  }
+ 
   
   
  .ProductTable {
@@ -163,18 +160,19 @@
 
 
 
-#column{
+#cols{
     pointer-events: none;
 }
 
-.TableDesign {
+.AdminTable {
     position: relative;
     display: grid;
    /** min-height: 300px;*/
-    background: var(--white);
+    background: blue;
     padding: 20px;
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 1);
+    box-shadow: blue;
     border-radius: 20px;
+    color: white;
     
 }
 

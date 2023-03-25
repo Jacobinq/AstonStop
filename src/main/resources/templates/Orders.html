@@ -32,8 +32,8 @@
                   </a>
                 </li>
                 <li>
-                    <a th:href="@{/Vendors}">
-                    Vendors
+                    <a th:href="@{/addProduct}">
+                    Add Product
                   </a>
                 </li>
               </ul>
@@ -60,20 +60,15 @@
 
     </div>
     
-   
-   
-
-    <button type="button">View incoming orders</button> 
-    <button type="button">View outgoing orders</button> 
-    <p>note:incoming order has status = processing. outgoing order=out for delivery</p>
+  
     <br><br>
-<div class="TableDesign">
+<div class="AdminTable">
     <div class="Header">
-        <h2>Orders</h2>
+        <h2>Admin Orders</h2>
         
     </div>
     <table>
-        <thead id="column">
+        <thead id="cols">
             <tr>
                 <td>Product</td>
                 <td>Price</td>
@@ -87,21 +82,6 @@
                 <td>Name 1</td>
                 <td>£100</td>
                 <td><span class="delivered">Delivered</span></td>
-                <td><button type="button">Change Order Status</button></td>
-            </tr>
-
-            <tr>
-                <td>Product 2</td>
-                <td>£499</td>
-                <td><span class="processing">Processing</span></td>
-                <td><button type="button">Change Order Status</button></td>
-               
-            </tr>
-
-            <tr>
-                <td>Product 3</td>
-                <td>£200</td>
-                <td><span class=" out-for-delivery">Out for delivery</span></td>
                 <td><button type="button">Change Order Status</button></td>
             </tr>
         </tbody>

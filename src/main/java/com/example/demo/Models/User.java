@@ -8,6 +8,10 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 import jakarta.persistence.Id;
 
+import java.util.List;
+
+import javax.management.relation.Role;
+
 import com.fasterxml.jackson.core.sym.Name;
 
 import jakarta.persistence.Column;
