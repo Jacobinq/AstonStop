@@ -57,7 +57,7 @@ public class CheckOutController {
 
 
     @GetMapping("/add")
-    public String basketAdd(@RequestParam String productName,@RequestParam int unitPrice, @RequestParam int quantity, String image, Model model  ){
+    public String basketAdd(@RequestParam String productName,@RequestParam int unitPrice, @RequestParam int quantity,@RequestParam String image, Model model  ){
         User user = SecurityUser.getUser();
         Basket newBasket = new Basket();
         newBasket.setUser(user);

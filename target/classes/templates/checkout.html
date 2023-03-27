@@ -35,13 +35,13 @@
                     <th>Quantity</th>
                     <th>Price</th>
                 </tr>
-                <tr th:each="basket : ${baskets}">
-                    <td ><img class="resize" th:src="@{images/}+${basket.image}"></td>
+                <!-- <tr th:each="basket : ${baskets}"> -->
+                    <td th:src="@{Images/}+${basket.image}"></td>
                     <td th:text="${basket.productName}"></td>
                     <td th:text="${basket.quantity}">
                         <span th:text="quantity">1</span>
                     </td>
-                    <td th:text="${basket.unitPrice}">£</td>
+                    <td th:text=" '£' + ${basket.unitPrice}">£</td>
             <td>
                     <td>
                         <!-- <form th:action="@{deleteBasket}" method="post"> -->

@@ -41,10 +41,22 @@
         <li><a th:href="@{/login}"><i class="fa fa-fw fa-user"></i> Login</a></li>
         <li><a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></a></i></li>
         <li><a th:href="@{/admin}">Admin</a></li>
-
+         </div>
       </ul>
     </div>
-
+    <!-- <div th:if="${#authorization.expression('hasRole(''ROLE_USER'')')}">
+        <div class="menu-bar">
+            <h1 class="logo">Aston<span>Stop</span></h1>
+            <ul>
+              <li><a th:href="@{/}">Home</a></li>
+              <li><a th:href="@{/about}">About</a></li>
+              <li><a th:href="@{/products}">Shop </a></li>
+              <li><a th:href="@{/contact}">Contact</a></li>
+              <li><a th:href="@{/checkout}"><i class="fa fa-shopping-cart" style="font-size:36px"></a></i></li>
+              <li><a th:href="@{/admin}">Admin</a></li>
+      
+            </ul>
+          </div> -->
 <ul>
    <li>
         <!-- Slideshow Carousel start -->

@@ -55,7 +55,7 @@
         <div class="product-grid">
                     <div class="product-image">
                       <a href="#" class="image">
-                        <!-- <img class="pic-1" th:src="@{Images/}+${product.image}"> -->
+                        <img class="pic-1" th:src="@{Images/}+${product.image}">
                       </a>
                       <ul class="product-links">
                         <li><a href="#"><i class="fa fa-heart"></i></a></li>
@@ -64,6 +64,7 @@
                      <form th:action="@{/add}" th:object="${basket}">
                       <input type="hidden" th:name="productName" th:value="${{product.productName}}"/>
                       <input type="hidden" th:name="unitPrice" th:value="${{product.unitPrice}}"/>
+                      <input type="hidden" th:name="image" th:value="${{product.image}}"/>
                       <input class="quantity" type="number" name="quantity" th:value="1" min="1" max="20">
                       <button class="add-to-cart" type="submit">Add to Cart</button>
                     </form>

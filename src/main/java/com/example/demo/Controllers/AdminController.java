@@ -30,13 +30,11 @@ public class AdminController {
     @Autowired
     private UserRepository userRepository;
     
-// @PreAuthorize("hasRole('ADMIN_ROLE')")
     @GetMapping("/admin")
     public String Aboutus(Model model){
         return "admin";
     }
 
-    // @PreAuthorize("hasRole('ADMIN_ROLE')")
 @GetMapping("/Orders")
 public String Orders(Model model) {
     // List<Orders> orders = orderService.getOrders();
@@ -44,21 +42,19 @@ public String Orders(Model model) {
     // model.addAttribute("order", new Orders());
     return "Orders";
 }
-// @PreAuthorize("hasRole('ADMIN_ROLE')")
 @GetMapping("/Roles")
 public String Roles(Model model) {
     // List<User> users = // get users from a service or repository
     // model.addAttribute("users", users);
     return "Roles";
 }
-
 @GetMapping("/addProduct")
 public String addProducts(Model model) {
    
     
     return "addProducts";
 }
-
+@PreAuthorize("hasAuthority('ADMIN_ROLE')")
 public class UserController {
     @GetMapping("/users")
     public String getUsers(@RequestParam(name = "search", required = false) String search, Model model) {
