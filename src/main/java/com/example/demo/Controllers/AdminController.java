@@ -7,21 +7,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Models.Product;
 import com.example.demo.Models.User;
+import com.example.demo.Repositorys.ProductRepository;
 import com.example.demo.Repositorys.UserRepository;
-import com.example.demo.Repositorys.OrdersRepository;
+// import com.example.demo.Repositorys.OrdersRepository;
 
 import com.example.demo.Services.productService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
-import ch.qos.logback.core.model.Model;
+
 
 
 
@@ -31,9 +34,11 @@ public class AdminController {
 
     @Autowired
     private UserRepository userRepository;
-    
     @Autowired
-    private OrdersRepository ordersRepository;
+    private ProductRepository productRepository;
+    
+    // @Autowired
+    // private OrdersRepository ordersRepository;
     
     @GetMapping("/admin")
     public String Aboutus(Model model){
@@ -49,13 +54,22 @@ public String Orders(Model model) {
 }
 @GetMapping("/Roles")
 public String Roles(Model model) {
-    // List<User> users = // get users from a service or repository
-    // model.addAttribute("users", users);
+    List<User> users = userRepository.findAll();
+    model.addAttribute("Users", users);
     return "Roles";
 }
+
+@GetMapping("/Roles/userRoles")
+public String UserRoles(Model model) {
+    List<User> users = userRepository.findAll();
+    model.addAttribute("Users", users);
+    return "Roles";
+}
+
 @GetMapping("/addProduct")
 public String addProducts(Model model) {
-   
+    List<Product> products = productRepository.findAll();
+    model.addAttribute("Product", products);
     
     return "addProducts";
 }
@@ -63,11 +77,7 @@ public String addProducts(Model model) {
 
 
 
-@PostMapping(value = "/admin/productAdd")
-	public String createUser(@ModelAttribute Product product, Model model, BindingResult bindingResult) {
-        System.out.println(product);
-		// Product products = productService.createProduct(product);
-        return "admin";
+
 		
     }
 
@@ -76,4 +86,3 @@ public String addProducts(Model model) {
 //         return "Hello";
 
 //     }
-}

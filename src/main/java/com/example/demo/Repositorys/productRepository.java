@@ -10,8 +10,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface productRepository extends JpaRepository<Product, Long> {
     Optional<Product> findById(Long productId);
+
+List<Product> findByProductNameContains(String name);
    
     // Optional<Product> findByCategory(String catergory);
 

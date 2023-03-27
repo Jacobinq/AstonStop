@@ -49,12 +49,12 @@
     </header>
        
     <div class="AdminHeader">
-        <h1>Inventory Management</h1>
-        <div class="search" style= "margin-left: 50%;">
+        <h1> Products</h1>
+        <!-- <div class="search" style= "margin-left: 50%;">
           <label>
               <input type="text" placeholder="Search">
               <i class="bi bi-search"></i>
-          </label>
+          </label> -->
       </div>
 
     <div class="Header">
@@ -63,17 +63,7 @@
     </div>
    
 
-<div class="ProductTable">
 
-
-    <!-- <form method="post" th:action="@{/admin/productAdd}" th:object="${product}"> 
-        <input id="productName" placeholder="name" type="text" th:field="*{productName}">
-        <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
-        <input id="price" placeholder="Price" type="text" th:field="*{unitPrice}">
-        <input id="description" placeholder="Description" type="text" th:field="*{productDescription}">
-        <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
-        <input type="submit">
-    </form> -->
 </div>
 
 
@@ -81,7 +71,6 @@
     <table>
             <thead id="cols">
                 <tr>
-                    <td>ID</td>
                     <td>Name</td>
                     <td>Type</td>
                     <td>Price</td>
@@ -92,8 +81,7 @@
                 </tr>
             </thead>
             <tbody>
-            <tr th:each="product : ${products}">
-                <input type="hidden" name="id" th:value="${product.productID}">
+            <tr th:each="product : ${Product}">
                 <td th:text="${product.productName}"></td>
                 <td th:text="${product.productType}"></td>
                 <td th:text="${product.unitPrice}"></td>
