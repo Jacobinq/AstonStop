@@ -49,16 +49,17 @@
         </header>
 <body>
 
-        <div class="d-flex flex-column container mt-5">
-            <div class="cardHeader">
-              <h1>User Roles</h1>   
-              <label>
-                <form th:action="@{/users}" method="get">
-                  <input type="text" name="search" placeholder="Search...">
-                  <button type="submit"><i class="bi bi-search"></i></button>
-            </label> </form>
-        </div>
-       
+  <div class="AdminHeader">
+    <h1>Admin Change Roles
+    </h1>
+    <div class="search" style= "margin-left: 50%;">
+      <label>
+          <input type="text" placeholder="Search">
+          <i class="bi bi-search"></i>
+      </label>
+  </div>
+  <br><br>
+  <br><br>
 <div class="AdminTable">
         <table>
                 <thead id="cols">
@@ -67,7 +68,6 @@
                         <td>Name</td>
                         <td>Email</td>
                         <td>Role</td>
-                        <td>Image</td>
                         <td>Action</td>
                     </tr>
                 </tr>

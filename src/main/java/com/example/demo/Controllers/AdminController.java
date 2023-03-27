@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.Models.Product;
 import com.example.demo.Models.User;
 import com.example.demo.Repositorys.UserRepository;
+import com.example.demo.Repositorys.OrdersRepository;
+
 import com.example.demo.Services.productService;
 
 import java.util.ArrayList;
@@ -29,6 +31,9 @@ public class AdminController {
 
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private OrdersRepository ordersRepository;
     
     @GetMapping("/admin")
     public String Aboutus(Model model){
@@ -54,19 +59,7 @@ public String addProducts(Model model) {
     
     return "addProducts";
 }
-@PreAuthorize("hasAuthority('ADMIN_ROLE')")
-public class UserController {
-    @GetMapping("/users")
-    public String getUsers(@RequestParam(name = "search", required = false) String search, Model model) {
-        List<User> users = userRepository.findAll();
-        if (search != null && !search.isEmpty()) {
-            users = users.stream()
-                         .filter(user -> user.getName().contains(search) || user.getEmail().contains(search))
-                         .collect(Collectors.toList());
-        }
-        return "user-list";
-    }
-}
+
 
 
 
@@ -77,4 +70,10 @@ public class UserController {
         return "admin";
 		
     }
+
+// Public String TotalRevenue(){
+//         List<Order> = 
+//         return "Hello";
+
+//     }
 }
