@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Models.Product;
-import com.example.demo.Repositorys.ProductRepository;
+import com.example.demo.Repositorys.productRepository;
 import com.example.demo.Services.productService;
 
 import org.springframework.ui.Model;
 @Controller
 public class ProductController {
     @Autowired
-    ProductRepository ProductRepository;
+    productRepository ProductRepository;
 
     @RequestMapping("/products") 
     public String product(Model model){

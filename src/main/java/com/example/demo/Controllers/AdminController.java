@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Models.Product;
 import com.example.demo.Models.User;
-import com.example.demo.Repositorys.ProductRepository;
+import com.example.demo.Repositorys.productRepository;
 import com.example.demo.Repositorys.UserRepository;
 // import com.example.demo.Repositorys.OrdersRepository;
 
@@ -35,13 +35,13 @@ public class AdminController {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    private ProductRepository productRepository;
+    private productRepository productRepository;
     
     // @Autowired
     // private OrdersRepository ordersRepository;
     
     @GetMapping("/admin")
-    public String Aboutus(Model model){
+    public String Admin(Model model){
         return "admin";
     }
 
@@ -67,12 +67,19 @@ public String UserRoles(Model model) {
 }
 
 @GetMapping("/addProduct")
-public String addProducts(Model model) {
+public String addProducts(Model model  ) {
     List<Product> products = productRepository.findAll();
     model.addAttribute("Product", products);
-    
     return "addProducts";
 }
+// @GetMapping("/addProduct")
+// public String addProducts( @RequestParam String productName,@RequestParam int stock, @RequestParam String productDescription, @RequestParam String productType, @RequestParam int unitPrice, @RequestParam int quantity,@RequestParam String image, Model model  ) {
+//     List<Product> products = productRepository.findAll();
+//     model.addAttribute("product", Product);
+//     Product NewProduct = new Product(productName, stock, unitPrice, productDescription, productType );
+//     productRepository.save(NewProduct);
+//     return "addProducts";
+// }
 
 
 

@@ -5,14 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.Models.Product;
-import com.example.demo.Repositorys.ProductRepository;
+import com.example.demo.Repositorys.productRepository;
 
 public class productService {
 
     @Autowired
-    private static ProductRepository productRepository;
+    private static productRepository productRepository;
 
-    public void ProductService(ProductRepository productRepository) {
+    public void ProductService(productRepository productRepository) {
         this.productRepository = productRepository;
     }
     
