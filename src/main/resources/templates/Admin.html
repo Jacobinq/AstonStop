@@ -31,8 +31,8 @@
               </a>
             </li>
             <li>
-                <a th:href="@{/addProduct}">
-                Add Product
+                <a th:href="@{addProduct}">
+                Products
               </a>
             </li>
           </ul>
@@ -50,19 +50,13 @@
 <body> 
     <div class="mainSection">
         
-        <div class="bar">           
-           
-            
-
-        </div>
         
        
 
 
 
-        <h1>Business Performance</h1>
-        <p>note: these values are automatically updated/calculated from database</p>
-    <div class="Cards">
+        <h1>Welcome To The Admin Dashboard</h1>
+    <!-- <div class="Cards">
         
         <div class="card">
             <div>
@@ -85,12 +79,20 @@
                 <i class="bi bi-cart-dash"></i>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    
-
+<!--     
+<div class="ProductTable">
+    <form method="post" th:action="@{admin/addProduct}" th:object="${Product}"> 
+        <input id="productName" placeholder="name" type="text" th:field="*{producName}">
+        <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
+        <input id="price" placeholder="Price" type="text" th:field="*{unitPrice}">
+        <input id="description" placeholder="Description" type="text" th:field="*{productDescription}">
+        <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
+        <input type="submit">
+    </form> 
       
-    </div>
+    </div> -->
 
 
     

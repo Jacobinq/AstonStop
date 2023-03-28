@@ -11,15 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Models.Product;
-import com.example.demo.Repositorys.ProductRepository;
-
-
+import com.example.demo.Repositorys.productRepository;
+import com.example.demo.Services.productService;
 
 import org.springframework.ui.Model;
 @Controller
 public class ProductController {
     @Autowired
-    ProductRepository ProductRepository;
+    productRepository ProductRepository;
 
     @RequestMapping("/products") 
     public String product(Model model){
@@ -27,26 +26,19 @@ public class ProductController {
         return "Products";
     }
 
+
+@PostMapping("/filter")
+public String filter(@RequestParam String name,Model model) {
+    List<Product> product = productService.fetchByName(name);
+    model.addAttribute("product", product);
+    return "Products";
 }
-// @GetMapping("/products/search")
-// public String storeSearch(@RequestParam("searchValue") String search, Model model) {
-//     List<Product> allProducts = ProductRepository.findAll();
-//     List<Product> result = new ArrayList<Product>();
-//     for (Product product : allProducts) {
-//         if (product.getProductName().toLowerCase().contains(search.toLowerCase())) {
-//             result.add(product);
-//         }
-//     }
-//     if (result.isEmpty()) {
-//         String error = "No items for that search";
-//         model.addAttribute("error", error);
-//         return "store";
-//     } else {
-//         String size = Integer.toString(result.size());
-//         model.addAttribute("products", result);
-//         model.addAttribute("size", size);
-//         return "store";
-//     }
-// }
-// }
+@PostMapping("/search")
+public String search(@RequestParam String name,Model model) {
+    List<Product> product = productService.fetchByName(name);
+    model.addAttribute("product", product);
+    return "Products";
+}
+
+}
 

@@ -29,8 +29,7 @@ public class Product {
     @Column(nullable = false, length = 20)
     private String productType;
 
-    public Product(long id, String productName, int stock, int unitPrice, String productDescription,String productType ) {
-        this.id = id;
+    public Product( String productName, int stock, int unitPrice, String productDescription,String productType ) {
         this.productName = productName;
         this.stock = stock;
         this.unitPrice = unitPrice;
