@@ -59,7 +59,7 @@ public class CheckOutController {
         Long user = SecurityUser.getUserID();
         List<Basket> baskets = basketRepository.findAllByUser_Id(user);
         for(Basket x : baskets){
-           Orders NewOrder = new Orders(x.getId(), x.getQuantity(), x.getUnitPrice(), "Processing");
+           Orders NewOrder = new Orders(x.getUser().getId(), x.getQuantity(), (x.getUnitPrice() * x.getQuantity()), "Processing");
            ordersRepository.save(NewOrder);
         }
         basketRepository.deleteAll();
