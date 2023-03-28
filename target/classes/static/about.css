@@ -25,6 +25,7 @@ body {
   color: var(--color-primary);
 }
 
+/* ----------Nav Bar CSS ---------- */
 .menu-bar {
   background-color: var(--color-black);
   height: 80px;
@@ -67,6 +68,7 @@ body {
   margin-left: 10px;
   padding-top: 3px;
 }
+
  
   /* RESPONISVENESS */
 @media (max-width: 100%) {
