@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 // import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,12 +28,13 @@ public class ProductController {
     }
 
 
-@PostMapping("/filter")
-public String filter(@RequestParam String name,Model model) {
-    List<Product> product = productService.fetchByName(name);
+@GetMapping("/products/category/{category}")
+public String filter(@PathVariable String category, Model model) {
+    List<Product> product = ProductRepository.findByProductType(category);
     model.addAttribute("product", product);
     return "Products";
 }
+
 @PostMapping("/search")
 public String search(@RequestParam String name,Model model) {
     List<Product> product = productService.fetchByName(name);

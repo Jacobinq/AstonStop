@@ -36,12 +36,12 @@
   </div>
 
 <div class="myBtnContainer">
-  <button class="btn" onclick=""> Show all</button>
-  <button class="btn" onclick=""> Clothes</button>
-  <button class="btn" onclick=""> Bags</button>
-  <button class="btn" onclick=""> Technology</button>
-  <button class="btn" onclick=""> Accessories</button>
-  <button class="btn" onclick=""> General</button>
+ <a><button th:href="@{/products}" class="btn" onclick=""> Show all</button> </a>
+  <a th:href="@{/products/category/{category}(category= 'clothes')}">Clothes</a>
+  <button th:href="@{/products/category/{category}(category= 'bags')}"class="btn"> Bags</button>
+  <button th:href="@{/store/category/{category}(category= 'Technology')}" class="btn" > Technology</button>
+  <button th:href="@{/store/category/{category}(category= 'Accessories')}" class="btn" > Accessories</button>
+  <button th:href="@{/store/category/{category}(category= 'General')}" class="btn"> General</button>
 
 <div style="float: right;" class="search" th:action="@{/product/search}"> 
   <i class="fa fa-search"></i>

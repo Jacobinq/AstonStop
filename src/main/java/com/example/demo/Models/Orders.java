@@ -41,7 +41,16 @@ public class Orders {
     public Integer TotalCost(){
         return price * quantity;
     }
+
+    public Integer GetID(){
+        return orderID;
+    }
+    
+    // public Void setStatus (String Status){
+    //     this.status
+    // }
 }
+
 
 
    

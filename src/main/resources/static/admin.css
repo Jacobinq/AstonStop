@@ -94,7 +94,6 @@
   }
   
   .dropdown-content a {
-    color: black;
     padding: 10px 20px;
     text-decoration: none;
     display: block;
@@ -142,20 +141,6 @@
   
  
   
-  
- .ProductTable {
-    
-    width: 80%;
-    padding: 25px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 25px;
-
-    border-collapse: collapse;
-    margin-top: 15px;
-    text-align: center;
-    
-  }
 
 
 
@@ -167,6 +152,7 @@
 .AdminTable {
     position: relative;
     display: grid;
+    text-align: center;
    /** min-height: 300px;*/
     background: blue;
     padding: 20px;
@@ -178,19 +164,11 @@
 
 
 
-.Header h2 {
-    font-weight: 300;
-    color:var(--blue);
-  }
-
   .TableDesign table thead td {
     font-weight: 600;
   }
 
-  .TableDesign table tbody tr:hover {
-    background: var(--blue);
-    color: var(--white);
-  }
+  
   
   .delivered {
     padding: 2px 4px;
@@ -219,34 +197,4 @@
     font-weight: 500;
   }
 
-  .info img{
-    border-radius: 50%;
-    height:200px;
-    width:200px;
-  }
-
-  .Account h2{
-    font-weight: bold;
-    position: relative;
-    margin-left:300px;
-    margin-top: -175px;
-  }
-
-.services{
-  position: relative;
-  margin-top: 18%;
-}
-
-.services img{
-  width: 150px;
-  height: 90px;
-  margin-top: 10px;
-}
-
-.services p{
-  position:relative;
-  margin-left: 160px;
-  font-size: large;
-  color: var(--black1);
  
-}

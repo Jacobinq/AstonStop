@@ -66,8 +66,9 @@
 <div class="AdminTable">
     <div class="Header">
         <h2>Orders Table</h2>
-        
-    </div>
+        <br>
+        <br>
+    <!-- /div>
     <table>
         <thead id="cols">
             <tr>
@@ -78,10 +79,45 @@
             </tr>
         </thead>
 
-    </table>
+    </table> -->
+</div>  
+ <!-- Orders -->
+ <div class="AdminTable"> 
+ <table>
+  <thead id="cols">
+  <tr>
+      <th>User ID</th>
+      <th>Quantity</th>
+      <th>Total price</th>
+      <th>Status</th>
+      <th>Action</th>
+  </tr>
+</thead>
+<tbody>
+  <tr th:each="order:${orders}">
+          <td th:text="${order.userID}"></td>
+          <td th:text="${order.quantity}"></td>
+          <td th:text="'£' + ${order.TotalCost}"></td>
+          <td th:text="${order.status}"></td>
+          <td> 
+            <form th:action="@{/updateorder}">
+              <input type="hidden" th:name="NewStatus"th:value="${order.orderID}">
+            <select placeholder="Update Status" th:name="orderStatus"  class="form-select">
+              <option th:value="Deliveried"> Deliveried</option>
+              <option th:value="Processing">Processing</option>
+              <option th:value="Cancelled">Cancelled</option>
+          </select>
+</td>
+<td>
+    <button type="submit" class="btn btn-outline-dark">Update</button>
+  </form>
+</td>
+  </tr>
+</tbody>
+</table>
 </div>
-
-
-   
-</body>
+</div>
 </html>
+
+
+

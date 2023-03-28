@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.Models.Product;
 import com.example.demo.Models.User;
+import com.example.demo.Models.Orders;
 import com.example.demo.Repositorys.productRepository;
 import com.example.demo.Repositorys.UserRepository;
-// import com.example.demo.Repositorys.OrdersRepository;
+import com.example.demo.Repositorys.OrdersRepository;
 
 import com.example.demo.Services.productService;
 
@@ -19,6 +20,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,8 +39,8 @@ public class AdminController {
     @Autowired
     private productRepository productRepository;
     
-    // @Autowired
-    // private OrdersRepository ordersRepository;
+    @Autowired
+    private OrdersRepository ordersRepository;
     
     @GetMapping("/admin")
     public String Admin(Model model){
@@ -47,8 +49,8 @@ public class AdminController {
 
 @GetMapping("/Orders")
 public String Orders(Model model) {
-    // List<Orders> orders = orderService.getOrders();
-    // model.addAttribute("orders", orders);
+    List<Orders> orders = ordersRepository.findAll();
+    model.addAttribute("orders", orders);
     // model.addAttribute("order", new Orders());
     return "Orders";
 }
@@ -72,20 +74,26 @@ public String addProducts(Model model  ) {
     model.addAttribute("Product", products);
     return "addProducts";
 }
-// @GetMapping("/addProduct")
-// public String addProducts( @RequestParam String productName,@RequestParam int stock, @RequestParam String productDescription, @RequestParam String productType, @RequestParam int unitPrice, @RequestParam int quantity,@RequestParam String image, Model model  ) {
-//     List<Product> products = productRepository.findAll();
-//     model.addAttribute("product", Product);
-//     Product NewProduct = new Product(productName, stock, unitPrice, productDescription, productType );
-//     productRepository.save(NewProduct);
-//     return "addProducts";
-// }
+
+
+@GetMapping("/updateorder")
+public String updateOrder(@RequestParam String orderStatus, @RequestParam Integer NewStatus, Model model  ) {
+    List<Orders> UpdatedStatus = ordersRepository.findByOrderID(NewStatus);
+    UpdatedStatus.get(0).setStatus(orderStatus);
+    ordersRepository.save(UpdatedStatus.get(0));
+    return "redirect:/Orders";
+}
+
+@GetMapping("/updaterole")
+public String updateRole(@RequestParam Long userId, @RequestParam String userRole) {
+    Optional<User> user = userRepository.findById(userId);
+    user.get().setRoles(userRole);
+    userRepository.save(user.get());
+    return "redirect:/Roles";
+}
 
 
 
-
-
-		
     }
 
 // Public String TotalRevenue(){
