@@ -61,8 +61,9 @@ public class CheckOutController {
         for(Basket x : baskets){
            Orders NewOrder = new Orders(x.getId(), x.getQuantity(), x.getUnitPrice(), "Processing");
            ordersRepository.save(NewOrder);
-           
         }
+        basketRepository.deleteAll();
+        
         
         return "/";
     }

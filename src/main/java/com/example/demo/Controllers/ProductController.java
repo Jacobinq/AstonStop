@@ -31,7 +31,7 @@ public class ProductController {
 @GetMapping("/products/category/{category}")
 public String filter(@PathVariable String category, Model model) {
     List<Product> product = ProductRepository.findByProductType(category);
-    model.addAttribute("product", product);
+    model.addAttribute("products", product);
     return "Products";
 }
 

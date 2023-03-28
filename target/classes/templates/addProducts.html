@@ -1,0 +1,105 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/Admin.css}"  rel="stylesheet">
+    <link th:href="@{//AdminNav.css}"  rel="stylesheet">
+
+    <link href="Admin.css"  rel="stylesheet">
+    <link href="AdminNav.css"  rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+</head>
+
+<header>
+    <nav class="menu-container"> 
+        <div class="menu">
+          <ul>
+            <li>
+              <a th:href="@{/admin}">
+                Home
+            </li>
+            <li>
+                <a th:href="@{/Orders}">
+                Orders
+              </b>
+            </li>
+            <li>
+                <a th:href="@{/Roles}">
+                Roles
+              </a>
+            </li>
+            <li>
+                <a th:href="@{/addProduct}">
+                Add Product
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <li>
+                <a th:href="@{/logout}"><i class="fa fa-fw fa-user"></i> Logout</a>
+            </li>
+
+              </a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+       
+    <!-- <div class="AdminHeader">
+        <h1> Products</h1>
+        <div class="search" style= "margin-left: 50%;">
+          <label>
+              <input type="text" placeholder="Search">
+              <i class="bi bi-search"></i>
+          </label>
+      </div> -->
+
+    <div class="Header">
+        <h2>Products</h2>
+        <div class="search" style= "margin-left: 50%;">
+          <label>
+              <input type="text" placeholder="Search">
+              <i class="bi bi-search"></i>
+          </label>
+      </div>
+      <br><br>
+      <br><br>
+    </div>
+   
+
+
+</div>
+
+
+      <div class="AdminTable">
+            <h2>Products Table</h2>
+            <br>
+            <br>
+    <table>
+            <thead id="cols">
+                <tr>
+                    <td>Name</td>
+                    <td>Type</td>
+                    <td>Price</td>
+                    <td>Image</td>
+                    <td>Description</td>
+                    <td>Stock</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="product : ${Product}">
+                <td th:text="${product.productName}"></td>
+                <td th:text="${product.productType}"></td>
+                <td th:text="${product.unitPrice}"></td>
+                <td th:text="${product.productDescription}"></td>
+                <td th:text="${product.Stock}"></td>
+                <td></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+</div>
