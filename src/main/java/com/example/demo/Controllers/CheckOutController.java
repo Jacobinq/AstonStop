@@ -15,8 +15,7 @@ import com.example.demo.Repositorys.ProductBasketRepository;
 import com.example.demo.Repositorys.UserRepository;
 import com.example.demo.Repositorys.productRepository;
 import com.example.demo.Security.SecurityUser;
-
-
+import com.example.demo.Services.basketService;
 import com.example.demo.Repositorys.BasketRepository;
 import com.example.demo.Repositorys.OrdersRepository;
 
@@ -29,6 +28,7 @@ import org.springframework.ui.Model;
 
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 @Controller
 public class CheckOutController {
     @Autowired
@@ -47,7 +47,7 @@ public class CheckOutController {
 
 
     @GetMapping("/checkout")
-    public String basket(Model model){
+    public String baskets(Model model){
         Long user = SecurityUser.getUserID();
         List<Basket> baskets = basketRepository.findAllByUser_Id(user);
         model.addAttribute("baskets", baskets);
@@ -68,8 +68,13 @@ public class CheckOutController {
         return "redirect:/orders";
     }
        
+    @PostMapping("/clear")
+    public String clearBasket(Model model) {
+        basketRepository.deleteAll();
 
+        return "redirect:/checkout";
 
+    }
  
 
 

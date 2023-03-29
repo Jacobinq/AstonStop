@@ -170,31 +170,4 @@
 
   
   
-  .delivered {
-    padding: 2px 4px;
-    background: #8de02c;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .processing {
-    padding: 2px 4px;
-    background: #1795ce;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
-  .out-for-delivery {
-    padding: 2px 4px;
-    background: #e9b10a;
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-
- 
+  

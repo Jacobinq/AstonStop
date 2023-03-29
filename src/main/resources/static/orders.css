@@ -154,14 +154,17 @@
     display: grid;
     text-align: center;
    /** min-height: 300px;*/
-    background: blue;
     padding: 20px;
-    box-shadow: blue;
     border-radius: 20px;
-    color: white;
+    color: black;
+  
     
 }
 
+th {
+    background-color: blue;
+    color: #fff;
+}
 
 
   .TableDesign table thead td {
