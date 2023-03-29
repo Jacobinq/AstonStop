@@ -98,7 +98,7 @@ public class CheckOutController {
         // basket.get().addProduct(products.get(), quantity);
         // productBasketRepository.save(newBasket);
     
-        return "products";
+        return "redirect:/products";
     }
 }
 

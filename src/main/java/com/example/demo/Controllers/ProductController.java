@@ -24,7 +24,7 @@ public class ProductController {
     @RequestMapping("/products") 
     public String product(Model model){
         model.addAttribute("products", ProductRepository.findAll());
-        return "Products";
+        return "products";
     }
 
 
@@ -32,15 +32,14 @@ public class ProductController {
 public String filter(@PathVariable String category, Model model) {
     List<Product> product = ProductRepository.findByProductType(category);
     model.addAttribute("products", product);
-    return "Products";
+    return "products";
 }
 
-@PostMapping("/search")
-public String search(@RequestParam String name,Model model) {
-    List<Product> product = productService.fetchByName(name);
-    model.addAttribute("product", product);
-    return "Products";
-}
+@GetMapping("/search")
+public String Search(@PathVariable String type, Model model) {
+    List<Product> product = ProductRepository.findBy(type);
+    model.addAttribute("products", product);
+    return "products";
 
 }
 
