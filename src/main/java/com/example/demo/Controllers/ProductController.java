@@ -36,10 +36,23 @@ public String filter(@PathVariable String category, Model model) {
 }
 
 @GetMapping("/search")
-public String Search(@PathVariable String type, Model model) {
-    List<Product> product = ProductRepository.findBy(type);
-    model.addAttribute("products", product);
-    return "products";
-
+public String storeSearch(@RequestParam("searchValue") String search, Model model) {
+    List<Product> allProducts = ProductRepository.findAll();
+    List<Product> result = new ArrayList<Product>();
+    for (Product product : allProducts) {
+        if (product.getProductName().toLowerCase().contains(search.toLowerCase())) {
+            result.add(product);
+        }
+    }
+    if (result.isEmpty()) {
+        String error = "No items for that search";
+        model.addAttribute("error", error);
+        return "store";
+    } else {
+        String size = Integer.toString(result.size());
+        model.addAttribute("products", result);
+        return "store";
+    }
+}
 }
 

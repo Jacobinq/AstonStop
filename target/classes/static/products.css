@@ -1,5 +1,5 @@
 
-.myBtnContainer{
+.myBtnContainer a{
   background-color: white;
   color: blue;
   margin: 0.6rem 0.6rem;
@@ -16,7 +16,16 @@
   margin: 10px;
 
 }  
+a:link { text-decoration: none; }
 
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
  
 
 
