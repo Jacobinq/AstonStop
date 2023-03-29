@@ -60,7 +60,7 @@
         
         <div class="card">
             <div>
-                <div class="figure">£1000</div>
+                <div class="figure">£203</div>
                 <div class="cardName">Total Revenue </div>
             </div>
 
@@ -71,7 +71,7 @@
 
         <div class="card">
             <div>
-                <div class="figure">50</div>
+                <div class="figure">3</div>
                 <div class="cardName">Total Sales</div>
             </div>
 
@@ -80,19 +80,65 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
 
-<!--     
-<div class="ProductTable">
-    <form method="post" th:action="@{admin/addProduct}" th:object="${Product}"> 
-        <input id="productName" placeholder="name" type="text" th:field="*{producName}">
-        <input id="productType" placeholder="productType" type="text" th:field="*{productType}">
-        <input id="price" placeholder="Price" type="text" th:field="*{unitPrice}">
-        <input id="description" placeholder="Description" type="text" th:field="*{productDescription}">
-        <input id="stock" placeholder="Stock" type="text" th:field="*{stock}">
-        <input type="submit">
-    </form> 
-      
-    </div> -->
+      <div class="AdminTable">
+        <h2>Products Table</h2>
+        <br>
+        <br>
+<table>
+        <thead id="cols">
+            <tr>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Price</td>
+                <td>Image</td>
+                <td>Description</td>
+                <td>Stock</td>
+                <td>Update</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${Product}">
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productType}"></td>
+            <td th:text="${product.unitPrice}"></td>
+            <td th:text="${product.productDescription}"></td>
+            <td th:text="${product.stock}"></td>
+            <form>
+            <select class="form">
+              <option th:value="Deliveried"> Out of Stock</option>
+              <option th:value="Processing">In Stock</option>
+              <option th:value="Cancelled">Sale</option>
+          </select>
+            <td></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div>
+
+<!-- 
+      <form method="post" th:action="@{/products}" th:object="${product}">
+          <input id="productName" placeholder="name" type="text" th:field="*{productName}"> <br><br>
+          <input id="productType" placeholder="productType" type="text" th:field="*{productType}"> <br><br>
+          <input id="price" placeholder="Price" type="text" th:field="*{unitPrice}"> <br><br>
+          <input id="image" placeholder="Image" type="text" th:field="*{image}"> <br><br>
+          <input id="description" placeholder="Description" type="text" th:field="*{productDescription}"> <br><br>
+          <input id="stock" placeholder="Stock" type="text" th:field="*{stock}"> <br><br>
+          
+          <input id="submit" type="submit" name="Add to Inventory">
+      </form> -->
+  </div>
 
 
     

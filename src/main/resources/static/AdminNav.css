@@ -4,7 +4,7 @@ menu-container {
     align-items: center;
     margin-bottom: 40px;
     background: blue;
-    color: #cdcdcd;
+    /* color: #cdcdcd; */
     height: 80px;
     font-style: bold;
     border-bottom: 1px solid #333333;
@@ -22,7 +22,7 @@ menu-container {
   }
   header ul li a::before {
 
-    background: #333;
+    background: black;
     transform: scaleX(0);
     transition: transform 0.5s ease-in-out;
     transform-origin: right;
@@ -100,7 +100,7 @@ header ul li a {
     }
 
     .menu-container a {
-      color: red;
+      color: black;
     }
 
     .menu-container input {

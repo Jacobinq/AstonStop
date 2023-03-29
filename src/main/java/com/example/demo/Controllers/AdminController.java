@@ -41,9 +41,13 @@ public class AdminController {
     
     @Autowired
     private OrdersRepository ordersRepository;
+    @Autowired
+    private productService ProductService;
     
     @GetMapping("/admin")
     public String Admin(Model model){
+         List<Product> products = productRepository.findAll();
+    model.addAttribute("Product", products);
         return "admin";
     }
 
@@ -91,7 +95,11 @@ public String updateRole(@RequestParam Long userId, @RequestParam String userRol
     userRepository.save(user.get());
     return "redirect:/Roles";
 }
-
+@PostMapping(value = "/NewAdd")
+	public String createUser(@ModelAttribute Product product, Model model) {
+		System.out.println(product);
+		Product products = ProductService.createProduct(product);
+		return "redirect:/admin";}
 
 
     }
