@@ -65,7 +65,7 @@ public class CheckOutController {
         basketRepository.deleteAll();
         
         
-        return "/";
+        return "redirect:/orders";
     }
        
 

@@ -479,3 +479,42 @@ ul{
 #right-arrow {
   margin-right: 4%;
 }
+menu-bar ul li a:hover{
+  color: rgb(180, 180, 180);
+  border-radius: 5px;
+  box-shadow: 0 0 5px white;
+}
+
+menu-bar ul ul li a:hover{
+  color: rgb(180, 180, 180);
+  box-shadow: none;
+}
+
+menu-bar ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid black;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s; 
+}
+
+menu-bar ul ul ul{
+  border-top: none;
+}
+
+menu-bar ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+menu-bar ul ul li{
+  position: relative;
+  margin: 0;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}

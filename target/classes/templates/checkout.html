@@ -40,14 +40,13 @@
                     <td th:src="@{Images/}+${basket.image}"></td>
                     <td th:text="${basket.productName}"></td>
                     <td th:text="${basket.quantity}">
-                        <span th:text="quantity">1</span>
-                    </td>
+                </td>
                     <td th:text=" '£' + ${basket.unitPrice}">£</td>
             <td>
                     <td>
                         <!-- <form th:action="@{deleteBasket}" method="post"> -->
                             <!-- <input type="hidden" th:name="UserId" th:value="${basket.basketID}" /> -->
-                            <button type="submit">Delete</button>
+                            <button id="checkout-btn" type="submit">Delete</button>
                         </form>
 
                        

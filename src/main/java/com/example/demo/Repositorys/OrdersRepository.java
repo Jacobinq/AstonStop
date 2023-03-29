@@ -10,7 +10,7 @@ import com.example.demo.Models.User;
 @Repository
 public interface OrdersRepository extends JpaRepository<Orders,Long>  {
 List<Orders> findByOrderID(Integer orderID);
-
+List<Orders> findByUserID(long userID);
 }
 
 

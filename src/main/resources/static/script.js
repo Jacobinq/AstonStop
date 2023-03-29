@@ -1,5 +1,5 @@
 // aos 
-// AOS.init();
+AOS.init();
 
 // navbar 
 let header = document.querySelector('.header');
