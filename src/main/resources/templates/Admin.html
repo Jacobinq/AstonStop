@@ -113,13 +113,18 @@
             <td th:text="${product.unitPrice}"></td>
             <td th:text="${product.productDescription}"></td>
             <td th:text="${product.stock}"></td>
+            <td>
             <form>
             <select class="form">
               <option th:value="Deliveried"> Out of Stock</option>
               <option th:value="Processing">In Stock</option>
               <option th:value="Cancelled">Sale</option>
           </select>
-            <td></td>
+          </td>
+          <td>
+            <button type="submit" class="btn btn-outline-dark">Update</button>
+          
+          </td>
         </tr>
         </tbody>
       </table>

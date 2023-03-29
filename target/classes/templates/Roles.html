@@ -76,7 +76,6 @@
                 </tr>
                 </thead>
               <tbody>
-                <!-- <input type="hidden" th:name="userId" th:value="${user.id}"> -->
                 <tr th:each="user : ${Users}">
                     <td th:text="${user.id}"></td>
                     <td th:text="${user.name}"></td>
@@ -85,11 +84,11 @@
                     <td>
                       <form th:action="@{/updaterole}"> 
                         <input type="hidden" th:name="userId" th:value="${user.id}">
-                        <select th:name="userRole" class="form-select">
-              
-                            <option th:value="ROLE_USER">ROLE_USER</option>
+                        <select placeholder="Update Role" th:name="userRole" class="form-select">
+                          <option th:value="ROLE_USER">ROLE_USER</option>
                             <option th:value="ROLE_ADMIN">ROLE_ADMIN</option>
                         </select>
+
                     </td>
                     <td>
                             <button type="submit" class="btn btn-outline-dark">Update</button>
