@@ -29,10 +29,10 @@
 ![image](https://user-images.githubusercontent.com/116639535/229390933-33bde129-ae77-4276-ab8c-7084acd16e86.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- ABOUT THE PROJECT -->
+
 ## About The Project
 <img width="1426" alt="image" src="https://user-images.githubusercontent.com/116639535/229391147-2e599be0-59e6-40e3-9408-3b817edeed37.png">
-<!-- BUILT WITH -->
+
 ## Built With
 * Springboot Framework
 * HTML
@@ -43,6 +43,7 @@
 * Flyway
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -61,6 +62,7 @@ Make sure that Java works on your system
 
  
 ## Contribution 
+
 Jacob Smith (Full-Stack)
 Hasnour Hasanur Rahman (Full-Stack)
 Khaheel Khan (Full-Stack)
@@ -85,6 +87,7 @@ Jacob Smith Email - 210064650@Aston.ac.uk
 Project Link: https://github.com/Jacobinq/AstonStop
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Acknowledgments
 
 * []()
