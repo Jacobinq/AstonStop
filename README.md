@@ -63,14 +63,14 @@ Make sure that Java works on your system
  
 ## Contribution 
 
-Jacob Smith (Full-Stack)
-Hasnour Hasanur Rahman (Full-Stack)
-Khaheel Khan (Full-Stack)
-Frank Bulley (Back-End)
-Aneesah Hussain (Front-End)
-Iltija Afzal (Front-End)
-Amar Gill (Front-End)
-Chelsea Bijoy (Front-End)
+* Jacob Smith (Full-Stack)
+* Hasnour Hasanur Rahman (Full-Stack)
+* Khaleel Khan (Full-Stack)
+* Frank Bulley (Back-End)
+* Aneesah Hussain (Front-End)
+* Iltija Afzal (Front-End)
+* Amar Gill (Front-End)
+* Chelsea Bijoy (Front-End)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
