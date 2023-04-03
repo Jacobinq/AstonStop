@@ -95,17 +95,12 @@ public String updateRole(@RequestParam Long userId, @RequestParam String userRol
     userRepository.save(user.get());
     return "redirect:/Roles";
 }
-@PostMapping(value = "/NewAdd")
-	public String createUser(@ModelAttribute Product product, Model model) {
-		System.out.println(product);
+
+	@PostMapping("/productAdd")
+	public String createUser(@ModelAttribute Product product, Model model){
 		Product products = ProductService.createProduct(product);
-		return "redirect:/admin";}
-
-
+		return "redirect:/admin";
     }
+}
 
-// Public String TotalRevenue(){
-//         List<Order> = 
-//         return "Hello";
 
-//     }

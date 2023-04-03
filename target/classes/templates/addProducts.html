@@ -47,14 +47,6 @@
       </nav>
     </header>
        
-    <!-- <div class="AdminHeader">
-        <h1> Products</h1>
-        <div class="search" style= "margin-left: 50%;">
-          <label>
-              <input type="text" placeholder="Search">
-              <i class="bi bi-search"></i>
-          </label>
-      </div> -->
 
     <div class="Header">
         <h2>Products</h2>
@@ -73,32 +65,73 @@
 </div>
 
 
-      <div class="AdminTable">
+  <div class="AdminTable">
             <h2>Products Table</h2>
             <br>
             <br>
-    <table>
-            <thead id="cols">
-                <tr>
-                    <td>Name</td>
-                    <td>Type</td>
-                    <td>Price</td>
-                    <td>Image</td>
-                    <td>Description</td>
-                    <td>Stock</td>
-                </tr>
-            </thead>
-            <tbody>
-            <tr th:each="product : ${Product}">
-                <td th:text="${product.productName}"></td>
-                <td th:text="${product.productType}"></td>
-                <td th:text="${product.unitPrice}"></td>
-                <td th:text="${product.productDescription}"></td>
-                <td th:text="${product.stock}"></td>
-                <td></td>
+    
+
+        <form method="post" th:object="${product}">
+          <span class="details">Name</span>
+          <input id="productName" placeholder="Product Name" type="text">
+              <span class="details">Type</span>
+          <input id="productType" placeholder="Product Type" type="text">
+                  <span class="details">Price</span>
+          <input id="price" placeholder="unitPrice" type="text">
+                      <span class="details">Description</span>
+          <input id="description" placeholder="Description" type="text">
+                          <span class="details">Stock</span>
+          <input id="stock" placeholder="Stock" type="text"`>
+                              <span class="details">Upload your image</span>
+          <input type="file">
+                                     <br>
+          <input id="submit" type="submit" name="Add to Inventory">
+
+      </form>
+  </div>
+</div>
+</form>
+<div class="AdminTable">
+<table>
+        <thead id="cols">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Price</td>
+                <td>Image</td>
+                <td>Description</td>
+                <td>Stock</td>
+                <td>Delete</td>
             </tr>
-            </tbody>
-          </table>
-        </div>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${Product}">
+
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.productType}"></td>
+            <td th:text="${product.unitPrice}"></td>
+            <td>
+                <img class="size" th:src="@{/images/}+${product.image}"></td>
+            <td th:text="${product.productDescription}"></td>
+            <td>
+
+                <input th:name="stock"   type="hidden" th:value="1">
+                <button class="quantity-btn " type="submit">+</button>
+            </form>
+
+            <span th:text="${product.stock}"></span>
+
+        
+            <td>
+                
+                    <button type="submit">Delete</button>
+          
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
 </div>
